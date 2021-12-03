@@ -19,17 +19,24 @@ div.full-column {
 
 div.column-third {
   width: 33%;
-  text-align: center;
 }
 
-div.full-column > h2 {
-  line-height: 20vh;
+div.header-adjustments {
+  margin-top: 8vh;
+}
+
+div.add-adjustments {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 div.image-mod {
   background-color: white;
-  border: solid;
+  border: solid 25px;
   border-radius: 50%;
+  width: 42%;
 }
 
 p.title {
@@ -39,11 +46,10 @@ p.title {
 
 p.description {
   font-size: small;
-  margin-bottom: 25px;
+  height: min-content;
 }
 
 img.image-background {
-  width: 33%;
+  width: 50px;
   background-color: white;
-  padding: 1rem;
 }
