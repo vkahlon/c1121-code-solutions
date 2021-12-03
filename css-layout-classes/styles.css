@@ -1,0 +1,32 @@
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 800px;
+}
+
+div.row {
+  display: flex;
+}
+
+div.column-full {
+  width: 100%;
+}
+
+div.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+div.column-one-fourth {
+  max-width: 25%;
+}
+
+div.column-two-third {
+  width: 66%;
+}
+
+div.column-one-fourth > img {
+  max-width: 100%;
+}
