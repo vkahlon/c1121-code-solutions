@@ -1,0 +1,54 @@
+* {
+  font-family: "Lato", sans-serif;
+  background-color: #1996da;
+  color: white;
+}
+
+div.container {
+  margin: auto;
+  width: 700px;
+}
+
+div.row {
+  display: flex;
+}
+
+div.full-column {
+  width: 100%;
+}
+
+div.column-third {
+  width: 33%;
+}
+
+div.header-adjustments {
+  margin-top: 8vh;
+}
+
+div.add-adjustments {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+div.image-mod {
+  background-color: white;
+  border: solid 25px;
+  border-radius: 50%;
+  width: 42%;
+}
+
+p.title {
+  font-size: medium;
+  font-weight: bold;
+}
+
+p.description {
+  font-size: small;
+}
+
+img.image-background {
+  width: 50px;
+  background-color: white;
+}
