@@ -13,6 +13,7 @@ h4 {
 
 label {
   padding-left: 10px;
+  padding-top: 5px;
   font-family: 'Brandon Grotesque', sans-serif;
   color: rgb(43, 43, 43);
   font-size: smaller;
@@ -22,7 +23,7 @@ input {
   width: 100%;
   padding: 9px 0 7px 8px;
   border-radius: 6px;
-  margin: 2px 0 8px 0;
+  margin: 3px 0 16px 0;
   font-family: 'Brandon Grotesque', sans-serif;
   border: solid 1px;
   border-color: rgb(175, 179, 178);
