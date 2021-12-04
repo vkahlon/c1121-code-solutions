@@ -22,24 +22,32 @@ div.col-half {
 div.title {
   font-size: x-large;
   letter-spacing: 2px;
+  margin-top: 5vh;
 }
 
 div.backend {
   display: flex;
-  flex-flow: wrap;
+  align-items: left;
+  margin-top: 35px;
 }
 
-p.desc-title {
+.statement-backend {
+  margin-top: 15px;
+}
+
+.desc-title {
   color: rgb(93, 93, 93);
 }
 
 p.statement {
   font-weight: bold;
   align-items: right;
+  margin-bottom: 10px;
 }
 
-p.desc-body {
+section.desc-body {
   color: rgb(93, 93, 93);
+  line-height: 2;
 }
 
 div.center {
@@ -52,6 +60,6 @@ button {
   color: rgb(209, 76, 69);
   border-color: rgb(209, 76, 69);
   background-color: white;
-  margin-top: 30px;
-  padding: 10px 30px 10px 30px;
+  margin-top: 40px;
+  padding: 10px 40px 10px 40px;
 }
