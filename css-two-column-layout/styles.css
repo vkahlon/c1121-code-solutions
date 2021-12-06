@@ -25,13 +25,13 @@ div.title {
   margin-top: 5vh;
 }
 
-div.backend {
+div.background {
   display: flex;
   align-items: left;
   margin-top: 35px;
 }
 
-.statement-backend {
+.statement-background {
   margin-top: 15px;
 }
 
