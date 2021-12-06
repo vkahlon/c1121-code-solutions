@@ -16,6 +16,10 @@
   width: 25%;
 }
 
+.col-three-fifth {
+  width: 60%;
+}
+
 /* header row */
 .header > a {
   color: rgb(110, 110, 110);
@@ -25,6 +29,10 @@
 /* hero section */
 .heroMod {
   position: relative;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  max-width: 100%;
+  height: 562.5px;
 }
 
 .overlay {
@@ -34,14 +42,38 @@
   position: absolute;
 }
 
-.hero-image {
-  max-width: 100%;
+.hero-text-background {
+  padding-top: 3rem;
+  position: relative;
+  margin-left: 4rem;
 }
 
-.heroMod > h1 {
-  color: black;
+.col-three-fifth > h1 {
   line-height: 50%;
+  color: white;
+  font-family: "Tiempos Headline", sans-serif;
   position: relative;
+  top: 30px;
+}
+
+.col-three-fifth > p {
+  color: white;
+  font-size: large;
+  max-width: 90%;
+  font-family: "Atlas", sans-serif;
+  line-height: 150%;
+  position: absolute;
+  top: 11rem;
+}
+
+.col-three-fifth > button {
+  background-color: rgb(41, 68, 100);
+  color: white;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  border-color: rgb(41, 68, 100);
+  position: relative;
+  top: 100px;
 }
 
 /* clinic section */
