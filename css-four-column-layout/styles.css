@@ -1,5 +1,5 @@
 .container {
-  width: 900px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -9,6 +9,11 @@
 
 .col-quarter {
   width: 25%;
+}
+
+.col-quarter > img {
+  max-width: 55%;
+  height: auto;
 }
 
 .header {
