@@ -1,4 +1,3 @@
-/* Defaults */
 .container {
   margin: auto;
   width: 1000px;
@@ -33,7 +32,6 @@
   width: 60%;
 }
 
-/* header row  complete */
 .header {
   display: flex;
   height: 80px;
@@ -81,7 +79,6 @@
   text-decoration: none;
 }
 
-/* hero section do right way */
 .heroMod {
   margin-top: 4rem;
   position: relative;
@@ -110,16 +107,19 @@
   font-family: "Tiempos Headline", sans-serif;
   position: relative;
   top: 2rem;
+  font-weight: normal;
+  font-size: 40px;
 }
 
 .col-three-fifth > p {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   max-width: 95%;
   font-family: "Atlas", sans-serif;
   line-height: 150%;
   position: relative;
   top: 2.5rem;
+  font-weight: normal;
 }
 
 .col-three-fifth > button {
@@ -134,7 +134,6 @@
   font-family: "Avenir", sans-serif;
 }
 
-/* clinic section DONE */
 .clinic-background {
   color: rgb(110, 110, 110);
   background-color: rgb(250, 250, 250);
@@ -148,6 +147,10 @@
   font-style: none;
   line-height: 90%;
   padding-top: 2rem;
+}
+
+.clinic-title > h2 {
+  font-weight: lighter;
 }
 
 .clinic-title > p {
@@ -167,7 +170,6 @@
   font-family: "Avenir", sans-serif;
 }
 
-/* ready to learn section DONE */
 .meeting-wrapper {
   display: flex;
   padding-bottom: 1rem;
@@ -184,6 +186,7 @@ h2.learnMore {
   color: rgb(110, 110, 110);
   letter-spacing: 1px;
   font-size: 26px;
+  font-weight: normal;
 }
 
 p.scheduleMeeting {
@@ -205,9 +208,8 @@ hr {
   border-top: solid 0.1px gray;
 }
 
-/* Canvas, Company and Product */
 .body-background {
-  height: 400px;
+  height: 360px;
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(82, 83, 81);
@@ -222,17 +224,18 @@ hr {
 }
 
 .whiteImage {
-  width: 55%;
+  width: 43%;
   height: auto;
   margin-top: 4rem;
-  margin-left: 4rem;
+  margin-left: 6rem;
 }
 
 div.address {
   margin-top: 2rem;
-  margin-left: 4rem;
+  margin-left: 6rem;
   font-size: small;
   line-height: 95%;
+  font-family: "Avenir", sans-serif;
 }
 
 .link-wrapper {
@@ -244,10 +247,9 @@ div.address {
 }
 
 p.title {
-  font-size: large;
+  font-size: medium;
 }
 
-/* footer */
 .footer-background {
   background-color: rgb(250, 250, 250);
 }
@@ -258,12 +260,12 @@ p.title {
 }
 
 .footer {
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0 2rem 4rem;
 }
 
 .footer > a {
   color: rgb(110, 110, 110);
   font-family: "Avenir", sans-serif;
-  margin-left: 35px;
+  padding-left: 28px;
   text-decoration: none;
 }
