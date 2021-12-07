@@ -1,3 +1,7 @@
+* {
+  background-color: rgb(247, 248, 250);
+}
+
 .container {
   width: 1000px;
   margin: auto;
@@ -11,19 +15,40 @@
   width: 25%;
 }
 
-.over-all-wrapper {
-  background-color: rgb(247, 248, 250);
+.phone-img {
+  max-width: 85%;
+  height: auto;
 }
 
-.col-quarter > img {
-  max-width: 55%;
+.icon-img {
+  max-width: 33%;
+  margin-left: 8px;
   height: auto;
+}
+
+.features {
+  text-align: center;
+  margin-right: 2rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: medium;
 }
 
 .header {
   text-align: center;
+  font-size: large;
+  font-family: 'Barlow', sans-serif;
+  font-weight: bolder;
+}
+
+.feature-statement {
+  font-size: small;
 }
 
 .phone-wrapper {
   display: flex;
+  margin-left: 40px;
+}
+
+.icon-wrapper {
+  margin-left: 4rem;
 }
