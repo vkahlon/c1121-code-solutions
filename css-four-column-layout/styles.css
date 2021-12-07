@@ -11,6 +11,10 @@
   width: 25%;
 }
 
+.over-all-wrapper {
+  background-color: rgb(247, 248, 250);
+}
+
 .col-quarter > img {
   max-width: 55%;
   height: auto;
@@ -21,5 +25,5 @@
 }
 
 .phone-wrapper {
-  background-color: rgb(247, 248, 250);
+  display: flex;
 }
