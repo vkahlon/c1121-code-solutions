@@ -1,21 +1,3 @@
-// Amazon would ordinarly have these vars in the cloud, ready to go!//
-// var jsMasher = '1337 LFZ Dr, Irvine, CA, 92618';
-
-// var bearNoob = new Image();
-// bearNoob.src = 'bearNoob.png';
-
-// var timelessWay = new Image();
-// timelessWay.src = 'timelessWay.png';
-
-// var gcAdapter = new Image();
-// gcAdapter.src = 'gcAdapter.png';
-
-// var gcController = new Image();
-// gcController.src = 'gcController.png';
-
-// var sqlBook = new Image();
-// sqlBook.src = 'sqlBook.png';
-
 var orderHistory = [
   {
     orderPlaced: 'August 4, 2020',
