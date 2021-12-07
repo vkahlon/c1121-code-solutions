@@ -16,5 +16,5 @@ var bookshelf = [
   }
 ];
 console.log('Value of the author in book 2: ' + bookshelf[1].author);
-console.log('Value of the isbn in book 1: ' + bookshelf[0].isbn);
+console.log('Value of the ISBN in book 1: ' + bookshelf[0].isbn);
 console.log('Value of the title in book 3: ' + bookshelf[2].title);
