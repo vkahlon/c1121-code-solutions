@@ -33,15 +33,22 @@
   font-size: medium;
 }
 
+.features-how {
+  font-family: 'Barlow', sans-serif;
+  font-size: x-large;
+}
+
 .header {
   text-align: center;
-  font-size: large;
+  font-size: x-large;
   font-family: 'Barlow', sans-serif;
   font-weight: bolder;
 }
 
 .feature-statement {
   font-size: small;
+  margin-left: 2rem;
+  padding-top: 10px;
 }
 
 .phone-wrapper {
