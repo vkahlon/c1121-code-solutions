@@ -6,7 +6,7 @@
 
 .container-2 {
   margin: auto;
-  width: 100%;
+  width: 80%;
 }
 
 .col-full {
@@ -33,7 +33,7 @@
   width: 60%;
 }
 
-/* header row */
+/* header row  complete */
 .header {
   display: flex;
   height: 80px;
@@ -65,7 +65,7 @@
   color: white;
   border-radius: 5px;
   border-color: rgb(41, 68, 100);
-  padding: 12px 10px 12px 10px;
+  padding: 10px 10px 12px 10px;
   position: relative;
   bottom: 10px;
   font-family: "Avenir", sans-serif;
@@ -81,7 +81,7 @@
   text-decoration: none;
 }
 
-/* hero section */
+/* hero section do right way */
 .heroMod {
   margin-top: 4rem;
   position: relative;
@@ -134,12 +134,13 @@
   font-family: "Avenir", sans-serif;
 }
 
-/* clinic section */
+/* clinic section DONE */
 .clinic-background {
   color: rgb(110, 110, 110);
   background-color: rgb(250, 250, 250);
   height: 400px;
   font-family: "Tiempos Headline", sans-serif;
+  margin-top: 4rem;
 }
 
 .clinic-title {
@@ -147,6 +148,13 @@
   font-style: none;
   line-height: 90%;
   padding-top: 2rem;
+}
+
+.clinic-title > p {
+  font-family: "Avenir", sans-serif;
+  font-size: small;
+  line-height: 25%;
+  padding-top: 8px;
 }
 
 .location-wrapper {
@@ -159,7 +167,7 @@
   font-family: "Avenir", sans-serif;
 }
 
-/* ready to learn section */
+/* ready to learn section DONE */
 .meeting-wrapper {
   display: flex;
   padding-bottom: 1rem;
@@ -174,6 +182,8 @@
 h2.learnMore {
   font-family: "Tiempos Headline", sans-serif;
   color: rgb(110, 110, 110);
+  letter-spacing: 1px;
+  font-size: 26px;
 }
 
 p.scheduleMeeting {
@@ -215,12 +225,12 @@ hr {
   width: 55%;
   height: auto;
   margin-top: 4rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 
 div.address {
   margin-top: 2rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
   font-size: small;
   line-height: 95%;
 }
