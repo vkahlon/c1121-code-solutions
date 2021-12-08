@@ -27,11 +27,12 @@ var library = [
     author: 'Vick Kahlon'
   }
 ];
+//
 var lastBook = library.pop();
-console.log((lastBook));
-
+console.log('lastBook:', lastBook);
+//
 var firstBook = library.shift();
-console.log(firstBook);
+console.log('firstBook:', firstBook);
 
 var js = {
   title: 'JavaScript for Impatient Programmers',
@@ -44,13 +45,14 @@ var css = {
 
 library.push(js);
 library.unshift(css);
-library.splice(3);
-console.log('library:' + library);
+library.splice(1, 1);
+console.log('library:', library);
 
+//
 var fullName = 'Vickram Kahlon';
 var firstAndLastName = fullName.split(' ');
-console.log(firstAndLastName);
+console.log('firstAndLastName:', firstAndLastName);
 
 var firstName = firstAndLastName[0];
 var sayMyName = firstName.toUpperCase();
-console.log('sayMyName: ' + sayMyName);
+console.log('sayMyName:', sayMyName);
