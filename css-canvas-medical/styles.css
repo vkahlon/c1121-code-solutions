@@ -1,9 +1,9 @@
 .container {
   margin: auto;
-  width: 90%;
+  width: 80%;
 }
 
-.compress-contain {
+.containment {
   margin: auto;
   width: 1000px;
 }
@@ -210,7 +210,7 @@ hr {
 }
 
 .body-background {
-  height: 500px;
+  height: 360px;
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(82, 83, 81);
@@ -251,13 +251,13 @@ p.title {
   font-size: medium;
 }
 
-.footer-background {
-  background-color: rgb(250, 250, 250);
-}
-
 .col-quarter > a {
   color: white;
   text-decoration: none;
+}
+
+.footer-background {
+  background-color: rgb(250, 250, 250);
 }
 
 .footer {
