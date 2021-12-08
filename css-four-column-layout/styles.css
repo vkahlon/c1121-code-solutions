@@ -30,7 +30,7 @@
   text-align: center;
   margin-right: 2rem;
   font-family: 'Barlow', sans-serif;
-  font-size: medium;
+  font-size: small;
 }
 
 .features-how {
@@ -47,7 +47,7 @@
 
 .feature-statement {
   font-size: small;
-  margin-left: 20px;
+  margin-left: 2rem;
   padding-top: 9px;
 }
 
