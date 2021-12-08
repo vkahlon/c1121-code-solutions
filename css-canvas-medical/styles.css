@@ -1,11 +1,11 @@
 .container {
   margin: auto;
-  width: 1000px;
+  width: 90%;
 }
 
-.container-2 {
+.compress-contain {
   margin: auto;
-  width: 80%;
+  width: 1000px;
 }
 
 .col-full {
@@ -16,7 +16,7 @@
   width: 50%;
 }
 
-.col-fourty {
+.col-forty {
   width: 40%;
 }
 
@@ -32,24 +32,25 @@
   width: 60%;
 }
 
+.navbar-border {
+  border-bottom: 0.3px solid rgb(230, 233, 236);
+  width: 100%;
+}
+
 .header {
   display: flex;
   height: 80px;
   padding-top: 1.8rem;
 }
 
-.line {
-  border-bottom: 0.3px solid rgb(230, 233, 236);
-}
-
-.header-Links {
+.header-links {
   display: flex;
   flex-direction: row;
   justify-content: end;
   height: 40px;
 }
 
-.header-Links > a {
+.header-links > a {
   font-size: medium;
   text-decoration: none;
   padding-left: 12px;
@@ -58,7 +59,7 @@
   font-family: "Avenir", sans-serif;
 }
 
-.header-Links > button {
+.header-links > button {
   background-color: rgb(41, 68, 100);
   color: white;
   border-radius: 5px;
@@ -79,7 +80,7 @@
   text-decoration: none;
 }
 
-.heroMod {
+.header-mod {
   margin-top: 4rem;
   position: relative;
   background-image: url("images/hero.jpg");
@@ -175,13 +176,13 @@
   padding-bottom: 1rem;
 }
 
-.buttonMod {
+.button-mod {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 25px;
 }
 
-h2.learnMore {
+h2.learn-more {
   font-family: "Tiempos Headline", sans-serif;
   color: rgb(110, 110, 110);
   letter-spacing: 1px;
@@ -189,7 +190,7 @@ h2.learnMore {
   font-weight: normal;
 }
 
-p.scheduleMeeting {
+p.schedule-meeting {
   color: rgb(110, 110, 110);
   font-family: "Avenir", sans-serif;
 }
@@ -209,7 +210,7 @@ hr {
 }
 
 .body-background {
-  height: 360px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(82, 83, 81);
@@ -223,7 +224,7 @@ hr {
   text-align: left;
 }
 
-.whiteImage {
+.white-image {
   width: 43%;
   height: auto;
   margin-top: 4rem;
