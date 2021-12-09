@@ -1,4 +1,44 @@
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
 .container {
   width: 1000px;
   margin: auto;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-fifth {
+  width: 20%;
+}
+
+.row {
+  display: flex;
+}
+
+.item-img {
+  width: 80%;
+  height: auto;
+}
+
+.louis-bag {
+  width: 160px;
+  height: 240px;
+}
+
+.col-full > h3 {
+  justify-content: center;
+  text-align: center;
+}
+
+.store-item {
+  font-weight: bold;
+  font-size: small;
+}
+
+.item-size {
+  color: rgb(212, 212, 212);
 }
