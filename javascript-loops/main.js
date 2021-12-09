@@ -45,8 +45,16 @@ function doubleAll(numbers) {
 // need to finish//
 function getKeys(object) {
   var keys = [];
-  for (keys in object) {
-    keys.push(object.key);
+  for (var property in object) {
+    keys.push(property);
   }
   return keys;
+}
+
+function getValues(object) {
+  var values = [];
+  for (var key in object) {
+    values.push(object[key]);
+  }
+  return values;
 }
