@@ -1,0 +1,63 @@
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-fifth {
+  width: 20%;
+}
+
+.row {
+  display: flex;
+}
+
+.item-img {
+  width: 100%;
+  height: auto;
+}
+
+.louis-bag {
+  width: 230px;
+  height: 360px;
+  object-fit: cover;
+}
+
+.new-price {
+  color: black;
+  font-weight: 900;
+}
+
+.new-price > mark {
+  background-color: rgb(255, 242, 231);
+}
+
+.price-slash {
+  color: rgb(212, 212, 212);
+  font-weight: normal;
+  text-decoration: slash;
+}
+
+.col-full > h3 {
+  justify-content: center;
+  text-align: center;
+  font-size: x-large;
+}
+
+.store-item {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.item-size {
+  color: rgb(212, 212, 212);
+  font-weight: normal;
+  font-size: 15px;
+}
