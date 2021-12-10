@@ -37,6 +37,10 @@
   width: 100%;
 }
 
+.row {
+  display: flex;
+}
+
 .header {
   display: flex;
   height: 80px;
