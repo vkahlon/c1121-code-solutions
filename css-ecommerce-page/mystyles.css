@@ -3,7 +3,7 @@
 }
 
 .container {
-  width: 1000px;
+  width: 1200px;
   margin: auto;
 }
 
@@ -20,25 +20,44 @@
 }
 
 .item-img {
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 
 .louis-bag {
-  width: 160px;
-  height: 240px;
+  width: 230px;
+  height: 360px;
+  object-fit: cover;
+}
+
+.new-price {
+  color: black;
+  font-weight: 900;
+}
+
+.new-price > mark {
+  background-color: rgb(255, 242, 231);
+}
+
+.price-slash {
+  color: rgb(212, 212, 212);
+  font-weight: normal;
+  text-decoration: slash;
 }
 
 .col-full > h3 {
   justify-content: center;
   text-align: center;
+  font-size: x-large;
 }
 
 .store-item {
+  font-size: 15px;
   font-weight: bold;
-  font-size: small;
 }
 
 .item-size {
   color: rgb(212, 212, 212);
+  font-weight: normal;
+  font-size: 15px;
 }
