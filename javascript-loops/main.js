@@ -9,8 +9,9 @@
 function getNumbersToTen() {
   var numbers = [];
   var currentNumber = 1;
-  for (currentNumber; currentNumber <= 10; currentNumber++) {
+  while (currentNumber <= 10) {
     numbers.push(currentNumber);
+    currentNumber++;
   }
   return numbers;
 }
@@ -18,31 +19,37 @@ function getNumbersToTen() {
 function getEvenNumbersToTwenty() {
   var evenNumbers = [];
   var currentNumber = 2;
-  for (currentNumber; currentNumber <= 20; currentNumber += 2) {
+  while (currentNumber <= 20) {
     evenNumbers.push(currentNumber);
+    currentNumber += 2;
   }
   return evenNumbers;
 }
 function repeatWord(word, times) {
   var count = 1;
   var repeated = '';
-  for (count; count <= times; count++) {
+  while (count <= times) {
     console.log(word, repeated);
+    count++;
   }
 }
 function logEachCharacter(string) {
-  for (var i = 0; i < string.length; i++) {
+  var i = 0;
+  while (i < string.length) {
     console.log(string[i]);
+    i++;
   }
 }
 function doubleAll(numbers) {
   var doubleArray = [];
-  for (var i = 0; i < numbers.length; i++) {
+  var i = 0;
+  while (i < numbers.length) {
     doubleArray.push(numbers[i] * 2);
+    i++;
   }
   return doubleArray;
 }
-// need to finish//
+
 function getKeys(object) {
   var keys = [];
   for (var property in object) {
