@@ -34,18 +34,14 @@ function repeatWord(word, times) {
   }
 }
 function logEachCharacter(string) {
-  var i = 0;
-  while (i < string.length) {
+  for (var i = 0; i < string.length; i++) {
     console.log(string[i]);
-    i++;
   }
 }
 function doubleAll(numbers) {
   var doubleArray = [];
-  var i = 0;
-  while (i < numbers.length) {
+  for (var i = 0; i < numbers.length; i++) {
     doubleArray.push(numbers[i] * 2);
-    i++;
   }
   return doubleArray;
 }
