@@ -1,0 +1,61 @@
+* {
+  background-color: rgb(247, 248, 250);
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-quarter {
+  width: 25%;
+}
+
+.phone-img {
+  max-width: 85%;
+  height: auto;
+}
+
+.icon-img {
+  max-width: 31%;
+  margin-left: 8px;
+  height: auto;
+}
+
+.features {
+  text-align: center;
+  margin-right: 2rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: small;
+}
+
+.features-how {
+  font-family: 'Barlow', sans-serif;
+  font-size: x-large;
+}
+
+.header {
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Barlow', sans-serif;
+  font-weight: bolder;
+}
+
+.feature-statement {
+  font-size: small;
+  margin-left: 2rem;
+  padding-top: 9px;
+}
+
+.row {
+  display: flex;
+  margin-left: 40px;
+}
+
+.icon-wrapper {
+  margin-left: 4rem;
+}
