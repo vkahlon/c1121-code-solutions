@@ -166,7 +166,7 @@
 }
 
 .location-wrapper {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   text-align: center;
   color: rgb(110, 110, 110);
@@ -273,4 +273,6 @@ p.title {
   font-family: "Avenir", sans-serif;
   padding-left: 28px;
   text-decoration: none;
+}
+*/
 }
