@@ -6,11 +6,13 @@
 // We will filter out javascript by employing an comparison check with it's starting character j or J
 // Once the process is complete, it will return the value of the process.
 function capitalizeWord(word) {
-  var newWordOne = '';
+  var newLetterOne = '';
   var newWordTwo = '';
   if ((word.charAt(0) === 'j') ||
     (word.charAt(0) === 'J')) {
-    newWordOne = word;
-    return newWordOne;
-  } return newWordTwo;
+    newLetterOne = word.charAt(0);
+    newLetterOne = newLetterOne.toUpperCase();
+    return newLetterOne;
+  }
+  return newLetterOne + newWordTwo;
 }
