@@ -5,9 +5,9 @@
 // We will go through an iteration, that takes the lists length, and uses it
 // to find the 2nd item in the list and so forth till the list ends.
 function tail(array) {
-var newArray = [];
-for (var i = 1; i < array.length; i++) {
-  newArray.push(array[i]);
-
-} return newArray;
+  var newArray = [];
+  for (var i = 1; i < array.length; i++) {
+    newArray.push(array[i]);
+  }
+  return newArray;
 }

@@ -5,12 +5,12 @@
 // Will perform iterations over the input array to only push truthy values to the storage space array.
 // if condition checks if the item is truthy, if so it pushes item to new array.
 // once the iteration is completed, return the value of the new compactArray.
- function compact (array) {
-   var compactArray = [];
-   for  (var i = 0; i < array.length; i++) {
+function compact(array) {
+  var compactArray = [];
+  for (var i = 0; i < array.length; i++) {
     if (array[i]) {
       compactArray.push(array[i]);
     }
-     }
-     return compactArray;
-   }
+  }
+  return compactArray;
+}
