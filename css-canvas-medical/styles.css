@@ -1,0 +1,271 @@
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+.containment {
+  margin: auto;
+  width: 1000px;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-forty {
+  width: 40%;
+}
+
+.col-sixty {
+  width: 60%;
+}
+
+.col-quarter {
+  width: 25%;
+}
+
+.col-three-fifth {
+  width: 60%;
+}
+
+.navbar-border {
+  border-bottom: 0.3px solid rgb(230, 233, 236);
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.header {
+  height: 80px;
+  padding-top: 1.8rem;
+}
+
+.header-links {
+  flex-direction: row;
+  justify-content: end;
+  height: 40px;
+}
+
+.header-links > a {
+  font-size: medium;
+  text-decoration: none;
+  padding-left: 12px;
+  padding-right: 30px;
+  color: rgb(110, 110, 110);
+  font-family: "Avenir", sans-serif;
+}
+
+.header-links > button {
+  background-color: rgb(41, 68, 100);
+  color: white;
+  border-radius: 5px;
+  border-color: rgb(41, 68, 100);
+  padding: 10px 10px 12px 10px;
+  position: relative;
+  bottom: 10px;
+  font-family: "Avenir", sans-serif;
+}
+
+.blue-image {
+  width: 40%;
+  height: auto;
+}
+
+.header > a {
+  color: rgb(110, 110, 110);
+  text-decoration: none;
+}
+
+.header-mod {
+  margin-top: 4rem;
+  position: relative;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  max-width: 100%;
+  height: 562.5px;
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  width: 1000px;
+  height: 562.5px;
+  position: absolute;
+}
+
+.hero-text-background {
+  padding-top: 3rem;
+  position: absolute;
+  margin-left: 4rem;
+}
+
+.col-three-fifth > h1 {
+  line-height: 50%;
+  color: white;
+  font-family: "Tiempos Headline", sans-serif;
+  position: relative;
+  top: 2rem;
+  font-weight: normal;
+  font-size: 40px;
+}
+
+.col-three-fifth > p {
+  color: white;
+  font-size: 1rem;
+  max-width: 95%;
+  font-family: "Atlas", sans-serif;
+  line-height: 150%;
+  position: relative;
+  top: 2.5rem;
+  font-weight: normal;
+}
+
+.col-three-fifth > button {
+  background-color: rgb(41, 68, 100);
+  color: white;
+  padding: 14px 37px 14px 37px;
+  border-radius: 5px;
+  border-color: rgb(41, 68, 100);
+  position: relative;
+  top: 4rem;
+  font-size: large;
+  font-family: "Avenir", sans-serif;
+}
+
+.clinic-background {
+  color: rgb(110, 110, 110);
+  background-color: rgb(250, 250, 250);
+  height: 400px;
+  font-family: "Tiempos Headline", sans-serif;
+  margin-top: 4rem;
+}
+
+.clinic-title {
+  text-align: center;
+  font-style: none;
+  line-height: 90%;
+  padding-top: 2rem;
+}
+
+.clinic-title > h2 {
+  font-weight: lighter;
+}
+
+.clinic-title > p {
+  font-family: "Avenir", sans-serif;
+  font-size: small;
+  line-height: 25%;
+  padding-top: 8px;
+}
+
+.location-wrapper {
+  flex-direction: row;
+  text-align: center;
+  color: rgb(110, 110, 110);
+  line-height: 200%;
+  padding-top: 2rem;
+  font-family: "Avenir", sans-serif;
+  width: 100%;
+}
+
+.meeting-wrapper {
+  padding-bottom: 1rem;
+}
+
+.button-mod {
+  flex-direction: row-reverse;
+  margin-top: 25px;
+}
+
+h2.learn-more {
+  font-family: "Tiempos Headline", sans-serif;
+  color: rgb(110, 110, 110);
+  letter-spacing: 1px;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+p.schedule-meeting {
+  color: rgb(110, 110, 110);
+  font-family: "Avenir", sans-serif;
+}
+
+button.get-started {
+  background-color: rgb(41, 68, 100);
+  color: white;
+  padding: 14px 37px 14px 37px;
+  border-radius: 5px;
+  border-color: rgb(41, 68, 100);
+  font-size: large;
+  font-family: "Avenir", sans-serif;
+}
+
+hr {
+  border-top: solid 0.1px gray;
+}
+
+.body-background {
+  height: 360px;
+  flex-wrap: wrap;
+  background-color: rgb(82, 83, 81);
+  color: white;
+}
+
+.address-wrapper {
+  margin-top: 40px;
+  width: 50%;
+  line-height: 100%;
+  text-align: left;
+}
+
+.white-image {
+  width: 43%;
+  height: auto;
+  margin-top: 4rem;
+  margin-left: 6rem;
+}
+
+div.address {
+  margin-top: 2rem;
+  margin-left: 6rem;
+  font-size: small;
+  line-height: 95%;
+  font-family: "Avenir", sans-serif;
+}
+
+.link-wrapper {
+  margin-top: 5rem;
+  width: 25%;
+  line-height: 200%;
+  font-family: "Avenir", sans-serif;
+  font-size: 0.9em;
+}
+
+p.title {
+  font-size: medium;
+}
+
+.col-quarter > a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-background {
+  background-color: rgb(250, 250, 250);
+}
+
+.footer {
+  padding: 2rem 0 2rem 4rem;
+}
+
+.footer > a {
+  color: rgb(110, 110, 110);
+  font-family: "Avenir", sans-serif;
+  padding-left: 28px;
+  text-decoration: none;
+}
