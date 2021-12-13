@@ -42,13 +42,11 @@
 }
 
 .header {
-  display: flex;
   height: 80px;
   padding-top: 1.8rem;
 }
 
 .header-links {
-  display: flex;
   flex-direction: row;
   justify-content: end;
   height: 40px;
@@ -166,22 +164,20 @@
 }
 
 .location-wrapper {
-  /* display: flex;
   flex-direction: row;
   text-align: center;
   color: rgb(110, 110, 110);
   line-height: 200%;
   padding-top: 2rem;
   font-family: "Avenir", sans-serif;
+  width: 100%;
 }
 
 .meeting-wrapper {
-  display: flex;
   padding-bottom: 1rem;
 }
 
 .button-mod {
-  display: flex;
   flex-direction: row-reverse;
   margin-top: 25px;
 }
@@ -215,7 +211,6 @@ hr {
 
 .body-background {
   height: 360px;
-  display: flex;
   flex-wrap: wrap;
   background-color: rgb(82, 83, 81);
   color: white;
@@ -273,6 +268,4 @@ p.title {
   font-family: "Avenir", sans-serif;
   padding-left: 28px;
   text-decoration: none;
-}
-*/
 }
