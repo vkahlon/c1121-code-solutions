@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-color.off {
+  background-color: black;
+}
+
+.background-color.on {
+  background-color: rgb(254, 249, 241);
+}
+
+button {
+  height: 200px;
+  border-radius: 50%;
+  width: 200px;
+  border: 0;
+}
+
+.button-off {
+  background-color: gray;
+  border-color: gray;
+}
+
+.button-on {
+  background-color: rgb(249, 234, 132);
+  border-color: rgb(249, 234, 132);
+  box-shadow: 0 0 20px yellow;
+}
