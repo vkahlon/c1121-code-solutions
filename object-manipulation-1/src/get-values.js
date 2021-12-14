@@ -7,5 +7,8 @@ function getValues(object) {
   var newArray = [];
   for (var value in object) {
     newArray.push(object[value]);
-  } return newArray;
+  }
+  return newArray;
 }
+var object1 = { firstName: 'vick' };
+getValues(object1);
