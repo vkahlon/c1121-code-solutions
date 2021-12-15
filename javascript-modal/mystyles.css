@@ -4,7 +4,6 @@ button.open-moda {
   border-color: rgb(74, 74, 232);
   color: white;
   font-size: large;
-  z-index: 0;
 }
 
 .col-full {
@@ -25,7 +24,6 @@ button.open-moda {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -49,7 +47,6 @@ button.open-moda {
   justify-content: center;
   border-radius: 5px;
   background-color: white;
-  z-index: 2;
 }
 
 .modal-box > p {
