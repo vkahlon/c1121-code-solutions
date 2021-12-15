@@ -1,3 +1,4 @@
+/* exported getValues */
 // This process returns an array of the object's property value.
 // Need storage space for an array
 // must utilize a for in loop to reiterate properties of an object
@@ -10,5 +11,3 @@ function getValues(object) {
   }
   return newArray;
 }
-var object1 = { firstName: 'vick' };
-getValues(object1);

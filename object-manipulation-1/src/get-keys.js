@@ -1,5 +1,4 @@
 /* exported getKeys */
-/* exported getValue */
 // This process returns an array of the object's keys.
 // Need storage space for an array
 // must utilize a for in loop to reiterate properties of an object
