@@ -59,7 +59,7 @@ button.open-moda {
   padding-bottom: 10px;
 }
 
-.modal-box > button {
+button.no-moda {
   background-color: rgb(235, 93, 93);
   border-color: rgb(235, 93, 93);
   color: white;
