@@ -1,18 +1,14 @@
-var clickCount = 0;
-var clickStatus = false;
+var lightStatus = false;
 function letThereBeLight(event) {
-  clickCount++;
-  if (clickCount % 2 === 1) {
-    clickStatus = true;
-  } else {
-    clickStatus = false;
-  }
-  if (clickStatus === true) {
+
+  if (lightStatus === false) {
     $lightButton.className = 'button-on';
     $lightBackground.className = 'row background-color on';
+    lightStatus = true;
   } else {
     $lightButton.className = 'button-off';
     $lightBackground.className = 'row background-color off';
+    lightStatus = false;
   }
 }
 var $lightButton = document.querySelector('.button-off');
