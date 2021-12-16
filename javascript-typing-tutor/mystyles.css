@@ -1,0 +1,28 @@
+* {
+  font-size: 2rem;
+  font-family: 'Balsamiq Sans', cursive;
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.row.text-box {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-full {
+  width: 100%;
+}
+
+span.green-active {
+  color: rgb(24, 205, 27);
+}
