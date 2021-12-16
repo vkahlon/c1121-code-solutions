@@ -1,10 +1,5 @@
-var fullInfo = {};
-function handleSubmit(event) {
-  event.preventDefault();
-  console.log('Message Data:', fullInfo);
-  $contactForm.reset();
-}
 function retrieveInfo(event) {
+  var fullInfo = {};
   event.preventDefault();
   var nameValue = $contactForm.elements.email.value;
   var emailValue = $contactForm.elements.name.value;
@@ -12,8 +7,10 @@ function retrieveInfo(event) {
   fullInfo.name = nameValue;
   fullInfo.email = emailValue;
   fullInfo.message = messageValue;
+  event.preventDefault();
+  console.log('Message Data:', fullInfo);
+  $contactForm.reset();
 }
 
 var $contactForm = document.querySelector('#contact-form');
 $contactForm.addEventListener('submit', retrieveInfo);
-$contactForm.addEventListener('submit', handleSubmit);
