@@ -4,7 +4,7 @@ function ransomCase(string) {
   var lowerString = string.toLowerCase();
   for (var i = 1; i < lowerString.length; i += 2) {
     var upperLetter = lowerString.charAt(i);
-    upperLetter = upperLetter.toUpperCase();
+    var newString = upperLetter.toUpperCase() + lowerString.slice(i + 1);
   }
-  return upperLetter;
+  return newString;
 }
