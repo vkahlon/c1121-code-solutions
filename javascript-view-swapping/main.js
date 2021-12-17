@@ -12,8 +12,9 @@ function callBack(event) {
       }
     }
   }
-  var dataViewValue = targetMatch.getAttribute('data-view');
   for (i = 0; i < $viewCollection.length; i++) {
+    var dataViewValue = targetMatch.getAttribute('data-view');
+
     if ($viewCollection[i].getAttribute('data-view') === dataViewValue) {
       $viewCollection[i].className = 'view';
     } else {
