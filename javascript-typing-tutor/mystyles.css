@@ -23,8 +23,8 @@
   width: 100%;
 }
 
-span.the-underline {
-  border-bottom: green;
+.the-underline {
+  border-bottom: green 10px;
 }
 
 span.green-active {
