@@ -1,6 +1,7 @@
-function keyComplete(event) {
-  $letterSelectorAll.textContent += event;
-
+function recordKey(event) {
 }
+
 var $letterSelectorAll = document.querySelectorAll('span');
-$letterSelectorAll.addEventListener('keydown', keyComplete);
+for (var i = 0; i < $letterSelectorAll.length; i++) {
+  $letterSelectorAll[i].addEventListener('keydown', recordKey);
+}
