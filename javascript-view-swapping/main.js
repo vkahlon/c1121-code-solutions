@@ -3,18 +3,15 @@ function callBack(event) {
   if (!event.target.matches('.tab')) {
     return;
   }
-  if (targetMatch.matches('.tab')) {
-    for (var i = 0; i < $tabCollection.length; i++) {
-      if ($tabCollection[i] === targetMatch) {
-        $tabCollection[i].className = 'tab active';
-      } else {
-        $tabCollection[i].className = 'tab';
-      }
+  for (var i = 0; i < $tabCollection.length; i++) {
+    if ($tabCollection[i] === targetMatch) {
+      $tabCollection[i].className = 'tab active';
+    } else {
+      $tabCollection[i].className = 'tab';
     }
   }
   for (i = 0; i < $viewCollection.length; i++) {
     var dataViewValue = targetMatch.getAttribute('data-view');
-
     if ($viewCollection[i].getAttribute('data-view') === dataViewValue) {
       $viewCollection[i].className = 'view';
     } else {
