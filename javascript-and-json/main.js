@@ -14,12 +14,10 @@ var bookArray = [{
   author: 'Dr. Cliff Hutchinson'
 }
 ];
-JSON.stringify(bookArray);
 console.log(bookArray);
 console.log('typeOf', typeof bookArray);
 
 var jStyle = '[{ "name": "Vick Kahlon", "id": "80154" }]';
-JSON.stringify(jStyle);
 console.log(jStyle);
 console.log('typeOf', typeof jStyle);
 
