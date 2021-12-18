@@ -24,9 +24,20 @@
 }
 
 .the-underline {
-  border-bottom: green 10px;
+  border-bottom: black 5px solid;
 }
 
-span.green-active {
+.green-active {
   color: rgb(24, 205, 27);
+}
+
+span.wrong-active {
+  color: red;
+  border-bottom: red 5px solid;
+}
+
+div > .active-stats {
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 10px;
 }

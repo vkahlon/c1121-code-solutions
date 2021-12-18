@@ -1,7 +1,14 @@
+var index = 0;
 function recordKey(event) {
+  if (event.key === $letterSelectorAll[index].textContent) {
+    $letterSelectorAll[index].className = 'green-active';
+    index++;
+    $letterSelectorAll[index].className = 'the-underline';
+  } else {
+    $letterSelectorAll[index].className = 'wrong-active';
+  }
+  return index;
 }
-
-var $letterSelectorAll = document.querySelectorAll('html');
-for (var i = 0; i < $letterSelectorAll.length; i++) {
-  $letterSelectorAll[i].addEventListener('keydown', recordKey);
-}
+var $selectorAll = document.querySelector('html');
+var $letterSelectorAll = document.querySelectorAll('span');
+$selectorAll.addEventListener('keydown', recordKey);
