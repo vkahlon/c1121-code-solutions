@@ -9,6 +9,5 @@ function recordKey(event) {
   }
   return index;
 }
-var $selectorAll = document.querySelector('html');
 var $letterSelectorAll = document.querySelectorAll('span');
-$selectorAll.addEventListener('keydown', recordKey);
+window.addEventListener('keydown', recordKey);
