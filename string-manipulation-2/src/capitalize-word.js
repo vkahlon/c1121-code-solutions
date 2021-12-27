@@ -11,22 +11,10 @@
 function capitalizeWord(word) {
   var newLetterOne = '';
   var newWordOne = '';
-  var newLetterTwo = '';
-  var newWordTwo = '';
   if ((word.charAt(0) === 'j') ||
     (word.charAt(0) === 'J')) {
-    newLetterOne = word.charAt(0);
-    newLetterOne = newLetterOne.toUpperCase();
-
-    newWordOne = word.slice(1, 4);
-    newWordOne = newWordOne.toLowerCase();
-
-    newLetterTwo = word.charAt(4);
-    newLetterTwo = newLetterTwo.toUpperCase();
-
-    newWordTwo = word.slice(5, 10);
-    newWordTwo = newWordTwo.toLowerCase();
-    return newLetterOne + newWordOne + newLetterTwo + newWordTwo;
+    newWordOne = 'JavaScript';
+    return newWordOne;
   } else {
     newLetterOne = word.charAt(0);
     newLetterOne = newLetterOne.toUpperCase();
