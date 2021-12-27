@@ -1,0 +1,43 @@
+* {
+  font-size: 2rem;
+  font-family: 'Balsamiq Sans', cursive;
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.row.text-box {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.the-underline {
+  border-bottom: black 5px solid;
+}
+
+.green-active {
+  color: rgb(24, 205, 27);
+}
+
+span.wrong-active {
+  color: red;
+  border-bottom: red 5px solid;
+}
+
+div > .active-stats {
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 10px;
+}
