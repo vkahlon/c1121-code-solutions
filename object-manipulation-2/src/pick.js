@@ -1,8 +1,7 @@
 /* exported pick */
 function pick(source, keys) {
-  var newObject = {};
-  for (var captKey in source) {
-    newObject[captKey] = source[captKey];
+  // var newObject = {};
+  for (var i = 0; i < keys.length; i++) {
+    //
   }
-  return newObject;
 }
