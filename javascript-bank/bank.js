@@ -10,10 +10,23 @@ Bank.prototype.openAccount = function (holder, balance) {
     this.accounts.push(newAccount);
     newAccount.deposit(balance);
     this.nextAccountNumber++;
-    return this.nextAccountNumber - 1;
+    return newAccount.number;
   } else {
     return null;
   }
 };
-Bank.prototype.getAccount = function (number) {};
-Bank.prototype.getTotalAssets = function (holder, balance) {};
+Bank.prototype.getAccount = function (number) {
+  for (var i = 0; i < this.accounts.length; i++) {
+    if (this.accounts[i].number === number) {
+      return this.accounts[i];
+    }
+  }
+  return null;
+};
+Bank.prototype.getTotalAssets = function () {
+  var totalAssets = 0;
+  for (var i = 0; i < this.accounts.length; i++) {
+    // totalAssets +=;
+  }
+  return totalAssets;
+};

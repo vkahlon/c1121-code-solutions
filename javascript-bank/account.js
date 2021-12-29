@@ -27,6 +27,14 @@ Account.prototype.getBalance = function () {
   if (this.transactions.length === 0) {
     return 0;
   } else {
-    return true;
+    var totalBalance = 0;
+    for (var i = 0; i < this.transactions.length; i++) {
+      if (this.transactions[i].type === 'deposit') {
+        totalBalance += this.transactions[i].amount;
+      } else if (this.transactions[i].type === 'withdrawal') {
+        totalBalance -= this.transactions[i].amount;
+      }
+    }
+    return totalBalance;
   }
 };
