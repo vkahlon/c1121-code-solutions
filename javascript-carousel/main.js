@@ -1,10 +1,9 @@
 var imgSource = ['images/001.png', 'images/004.png', 'images/007.png', 'images/025.png', 'images/039.png'];
 var imgSelector = document.querySelector('.img-wrapper');
 var bullets = document.querySelectorAll('.fa-circle');
-
-// var timer =
-setInterval(swapItem, 3000);
+var timeID = setInterval(swapItem, 3000);
 var theCount = 0;
+
 function swapItem() {
   theCount++;
   if (theCount === 5) {
@@ -12,16 +11,14 @@ function swapItem() {
     bullets[4].className = 'far fa-circle';
     bullets[theCount].className = 'fas fa-circle';
     imgSelector.setAttribute('src', imgSource[theCount]);
-    return theCount;
   }
   bullets[theCount - 1].className = 'far fa-circle';
   bullets[theCount].className = 'fas fa-circle';
   imgSelector.setAttribute('src', imgSource[theCount]);
-  return theCount;
 }
-
 var clickAButton = document.querySelector('.bullets');
 clickAButton.addEventListener('click', clickButton);
+
 function clickButton(event) {
   for (var i = 0; i < bullets.length; i++) {
     if (bullets[i] === event.target) {
@@ -29,9 +26,10 @@ function clickButton(event) {
       bullets[i].className = 'fas fa-circle';
       imgSelector.setAttribute('src', imgSource[i]);
       theCount = i;
-      return theCount;
+      timeOut();
     } else {
       bullets[i].className = 'far fa-circle';
+      timeOut();
     }
   }
 }
@@ -47,12 +45,12 @@ function moveRight(event) {
     bullets[4].className = 'far fa-circle';
     bullets[theCount].className = 'fas fa-circle';
     imgSelector.setAttribute('src', imgSource[theCount]);
-    return theCount;
+    timeOut();
   }
   bullets[theCount - 1].className = 'far fa-circle';
   bullets[theCount].className = 'fas fa-circle';
   imgSelector.setAttribute('src', imgSource[theCount]);
-  return theCount;
+  timeOut();
 }
 
 function moveLeft(event) {
@@ -62,10 +60,14 @@ function moveLeft(event) {
     bullets[0].className = 'far fa-circle';
     bullets[theCount].className = 'fas fa-circle';
     imgSelector.setAttribute('src', imgSource[theCount]);
-    return theCount;
+    timeOut();
   }
   bullets[theCount + 1].className = 'far fa-circle';
   bullets[theCount].className = 'fas fa-circle';
   imgSelector.setAttribute('src', imgSource[theCount]);
-  return theCount;
+  timeOut();
+}
+function timeOut() {
+  clearInterval(timeID);
+  timeID = setInterval(swapItem, 3000);
 }
