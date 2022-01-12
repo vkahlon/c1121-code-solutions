@@ -7,7 +7,6 @@
 // at the end of the iteration, return the intersection list
 function union(first, second) {
   var unionList = [];
-
   var combinedList = first.concat(second);
   for (var captKey of combinedList) {
     if (!(unionList.includes(captKey))) {
