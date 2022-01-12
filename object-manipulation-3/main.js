@@ -47,6 +47,25 @@ var player4 = {
   name: 'Ray L',
   hand: hand4
 };
+var ranks = grabRankings(player1, player2, player3, player4);
+function grabRankings(player1, player2, player3, player4) {
+  var getCardRank = getARank(player1.hand[0].rank);
+  var getCardRank2 = getARank(player1.hand[1].rank);
+  console.log(getCardRank);
+  console.log(getCardRank2);
+  function getARank(card) {
+    if (card === 'Jack' || card === 'Queen' || card === 'King') {
+      card = 10;
+      return card;
+    } else if (card === 'Ace') {
+      card = 11;
+      return card;
+    } else {
+      return card;
+    }
+  }
+}
+console.log(ranks);
 console.log(player1);
 console.log(player2);
 console.log(player3);
