@@ -1,8 +1,9 @@
 /* exported flatten */
+// no spread operator, beginners aren't allowed to use it
 // declare a process with a list as a parameter
-// Utilize the concat method of an empty array, which takes a single argument, the spread operator with the input array, assign the result of the expression to the variable flatArray.
+// Utilize the apply method of the concat property of the array list, which takes a two arguments, an empty array literal, and the input list, assign the result of the expression to the variable flatArray.
 // return the flattenArray storage space
 function flatten(array) {
-  var flattenedArray = [].concat(...array);
-  return flattenedArray;
+  var flatArray = array.concat.apply([], array);
+  return flatArray;
 }
