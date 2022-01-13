@@ -45,7 +45,10 @@ function startsGame(playerList) {
     return list;
   }
   for (var i = 0; i < playerList.length; i++) {
-    playerList[i].hand = [shuffledCards[i], shuffledCards[i + 10]];
+    playerList[i].hand = [shuffledCards[i]];
+    shuffledCards = shuffledCards.splice(i);
+    playerList[i].hand.push(shuffledCards[i + 1]);
+    shuffledCards = shuffledCards.splice(i + 1);
   }
   var getRank = grabRankings(playerList);
   function grabRankings(playerList) {
