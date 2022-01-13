@@ -49,10 +49,31 @@ var player4 = {
 };
 var ranks = grabRankings(player1, player2, player3, player4);
 function grabRankings(player1, player2, player3, player4) {
-  var getCardRank = getARank(player1.hand[0].rank);
-  var getCardRank2 = getARank(player1.hand[1].rank);
-  console.log(getCardRank);
-  console.log(getCardRank2);
+  var theTable = [];
+  var getPlayer1Rank1 = getARank(player1.hand[0].rank);
+  var getPlayer1Rank2 = getARank(player1.hand[1].rank);
+  var getPlayer1TotalRank = getPlayer1Rank1 + getPlayer1Rank2;
+
+  var getPlayer2Rank1 = getARank(player2.hand[0].rank);
+  var getPlayer2Rank2 = getARank(player2.hand[1].rank);
+  var getPlayer2TotalRank = getPlayer2Rank1 + getPlayer2Rank2;
+
+  var getPlayer3Rank1 = getARank(player3.hand[0].rank);
+  var getPlayer3Rank2 = getARank(player3.hand[1].rank);
+  var getPlayer3TotalRank = getPlayer3Rank1 + getPlayer3Rank2;
+
+  var getPlayer4Rank1 = getARank(player4.hand[0].rank);
+  var getPlayer4Rank2 = getARank(player4.hand[1].rank);
+  var getPlayer4TotalRank = getPlayer4Rank1 + getPlayer4Rank2;
+
+  var player1Rank = { name: 'Skip Bayless', points: getPlayer1TotalRank };
+  var player2Rank = { name: 'Shannon Sharpe', points: getPlayer2TotalRank };
+  var player3Rank = { name: 'Stephen A', points: getPlayer3TotalRank };
+  var player4Rank = { name: 'Ray L', points: getPlayer4TotalRank };
+  theTable.push(player1Rank);
+  theTable.push(player2Rank);
+  theTable.push(player3Rank);
+  theTable.push(player4Rank);
   function getARank(card) {
     if (card === 'Jack' || card === 'Queen' || card === 'King') {
       card = 10;
@@ -64,9 +85,10 @@ function grabRankings(player1, player2, player3, player4) {
       return card;
     }
   }
+  return theTable;
 }
-console.log(ranks);
-console.log(player1);
-console.log(player2);
-console.log(player3);
-console.log(player4);
+var grabWinnerList = _.sortBy(ranks, ['points']);
+console.log('The winner is ' + grabWinnerList[3].name + ' who had ' + grabWinnerList[3].points + ' points.');
+console.log('Second place is ' + grabWinnerList[2].name + ' who had ' + grabWinnerList[2].points + ' points.');
+console.log('Third place is ' + grabWinnerList[1].name + ' who had ' + grabWinnerList[1].points + ' points.');
+console.log('Fourth place is ' + grabWinnerList[0].name + ' who had ' + grabWinnerList[0].points + ' points.');
