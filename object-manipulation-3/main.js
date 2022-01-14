@@ -77,19 +77,16 @@ function startsGame(playerList) {
   }
   var grabWinnerList = _.sortBy(getRank, ['points']);
   var getPlayerCount = grabWinnerList.length - 1;
-  if (grabWinnerList[getPlayerCount].points === grabWinnerList[getPlayerCount - 1].points) {
+  if (grabWinnerList[getPlayerCount].points !== grabWinnerList[getPlayerCount - 1].points) {
+    console.log('The winner is ' + grabWinnerList[getPlayerCount].name + ' who had ' + grabWinnerList[getPlayerCount - 1].points + ' points.');
+  } else {
     console.log('TIE BREAKER!');
     var newGame = [];
-    var grabTieBreakerPlayer1 = { name: grabWinnerList[2].name, hand: null };
-    var grabTieBreakerPlayer2 = { name: grabWinnerList[3].name, hand: null };
+    var grabTieBreakerPlayer1 = { name: grabWinnerList[getPlayerCount - 1].name, hand: null };
+    var grabTieBreakerPlayer2 = { name: grabWinnerList[getPlayerCount].name, hand: null };
     newGame.push(grabTieBreakerPlayer1);
     newGame.push(grabTieBreakerPlayer2);
-    var startNewRound = startsGame(newGame);
-    console.log('The winner is ' + startNewRound[1].name + ' who had ' + startNewRound[1].points + ' points.');
-    console.log('The runner-up is ' + startNewRound[0].name + ' who had ' + startNewRound[0].points + ' points.');
-  } else if (grabWinnerList.length > 2) {
-    console.log('The winner is ' + grabWinnerList[getPlayerCount].name + ' who had ' + grabWinnerList[getPlayerCount - 1].points + ' points.');
-    console.log('The runner-up is ' + grabWinnerList[getPlayerCount - 1].name + ' who had ' + grabWinnerList[getPlayerCount - 2].points + ' points.');
+    startsGame(newGame);
   }
   return grabWinnerList;
 }
