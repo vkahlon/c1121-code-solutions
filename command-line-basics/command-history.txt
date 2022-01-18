@@ -1,0 +1,500 @@
+   72  git pull origin master
+   73  git switch object-manipulation-2
+   74  git add object-manipulation-2
+   75  got status
+   76  git status
+   77  git commit -m "attempted object-manipulation-2
+   78  cd ~/repos/c1121-code-solutions
+   79  git status
+   80  git commit -m "attempted object-manipulation-2 exercise."
+   81  git push origin object-manipulation-2
+   82  git status
+   83  git switch master
+   84  git switch array-manipulation-2
+   85  git status
+   86  git pull origin array-manipulation-2
+   87  git status
+   88  git status
+   89  git add array-manipulation-2
+   90  git status
+   91  git commit -m "attempted array-manipulation-2 exercise."
+   92  git push origin array-manipulation-2
+   93  git status
+   94  git switch master
+   95  git status
+   96  git branch javascript-this
+   97  git status
+   98  git switch javascript-this
+   99  git status
+  100  git add javscript-this
+  101  git add javascript-this
+  102  git status
+  103  git commit -m "Completed javascript-this exercise."
+  104  git push origin javascript-this
+  105  git switch master
+  106  git pull origin master
+  107  git switch array-manipulation-2
+  108  git status
+  109  git add array-manipulation-2
+  110  git status
+  111  git commit -m "attempted array-manipulation-2."
+  112  git push origin array-manipulation-2
+  113  git switch master
+  114  git branch javascript-prototypes
+  115  git status
+  116  git switch javascript-prototypes
+  117  git add javascript-prototypes
+  118  git status
+  119  git commit -m "Completed javascript prototype class."
+  120  git push origin javascript-prototypes
+  121  git switch master
+  122  git switch array-manipulation-2
+  123  git status
+  124  git add array-manipulation-2
+  125  git status
+  126  git commit -m "Completed javascript prototype class."
+  127  git status
+  128  git push origin array-manipulation-2
+  129  git satus
+  130  git status
+  131  git switch master
+  132  git switch array-manipulation-2
+  133  git status
+  134  git add array-manipulation-2
+  135  git status
+  136  git commit -m "Completed Array Manipulation 2."
+  137  git push origin array-manipulation-2
+  138  git status
+  139  git switch master
+  140  git switch object-manipulation-2
+  141  git status
+  142  git add object-manipulation-2
+  143  git commit -m "attempted object-manipulation-2 exercise."
+  144  git push origin object-manipulation-2
+  145  git switch master
+  146  cd ~/repos/c1121-code-solutions
+  147  git switch object-manipulation-2
+  148  git pull origin object-manipulation-2
+  149  git status
+  150  git add object-manipulation-2
+  151  git status
+  152  git commit -m "attempted objects 2 exercise."
+  153  git push origin object-manipulation-2
+  154  git switch master
+  155  git branch javascript-constructors
+  156  git status
+  157  git switch javascript-constructors
+  158  git status
+  159  git add javascript-constructors
+  160  git commit -m "Completed javascript-constructors exercise."
+  161  git push origin javascript-constructors
+  162  git switch master
+  163  git pull origin master
+  164  git switch object-manipulation-2
+  165  git add object-manipulation-2
+  166  git commit -m "attempted objects 2 exercise."
+  167  git push origin object-manipulation-2
+  168  git switch master
+  169  git branch javascript-bank
+  170  git status
+  171  git switch javascript-bank
+  172  git add javascript-bank
+  173  git status
+  174  git commit -m "attempted javascript-bank."
+  175  git push origin javascript-bank
+  176  git status
+  177  cd ~/repos/c1121-code-solutions
+  178  git pull origin javascript-bank
+  179  git status
+  180  git add javascript-bank
+  181  git status
+  182  git commit -m "Completed javascript-bank."
+  183  git push origin javascript-bank
+  184  git switch master
+  185  git branch javascript-branch
+  186  git switch javascript-branch
+  187  git add javascript-branch
+  188  git status
+  189  git commit -m "Completed javascript-branch exercise."
+  190  git add javascript-timers
+  191  git status
+  192  git commit -m "Completed javascript-timers  exercise."
+  193  git switch master
+  194  git branch javascript-timers
+  195  git switch javascript-timers
+  196  git switch javascript-branch
+  197  git branch -m javascript-timers
+  198  git branch -D javascript-timers
+  199  git branch -M javascript-timers
+  200  git status
+  201  git push origin javascript-timers
+  202  git status
+  203  git switch master
+  204  git status
+  205  git pull origin master
+  206  git status
+  207  git switch javascript-timers
+  208  git status
+  209  git add javascript-timers
+  210  git commit -m "Completed javascript-timers exercise."
+  211  git status
+  212  git push origin javascript-timers
+  213  git status
+  214  git switch master
+  215  git pull origin master
+  216  git switch array-manipulation-2
+  217  git status
+  218  git add array-manipulation-2
+  219  git status
+  220  git commit -m "Patched array-manipulation-2."
+  221  git push origin array-manipulation-2
+  222  git status
+  223  git switch master
+  224  git switch object-manipulation-2
+  225  git pull origin object-manipulation-2
+  226  git status
+  227  git add object-manipulation-2
+  228  git commit -m "Attempted object-manipulation-2."
+  229  git push origin object-manipulation-2
+  230  git switch master
+  231  git branch javascript-carousel
+  232  git switch javascript-carousel
+  233  git status
+  234  git add javascript-carousel
+  235  git status
+  236  git commit -m "Completed javascript-carousel."
+  237  git push origin javascript-carousel
+  238  curl -sS https://lfz-static.s3-us-west-1.amazonaws.com/dev-environment/mac-installer.bash | bash
+  239  dev-env
+  240  dev-env
+  241  whoami
+  242  dev-env
+  243  dev-env
+  244  cd ~/repos/c1121-code-solutions
+  245  git switch master
+  246  git pull origin master
+  247  git switch javascript-carousel
+  248  git pull origin javascript-carousel
+  249  git switch master
+  250  cd ~/repos
+  251  git clone https://github.com/vkahlon/driving-game
+  252  cd driving-game
+  253  npm ci
+  254  git branch issue-1-see-car
+  255  git switch issue-1-see-car
+  256  git status
+  257  git add index.html
+  258  git add mystyles.css
+  259  git status
+  260  git commit -m "Completed Issue-1"
+  261  git push origin issue-1-see-car
+  262  git push origin issue-1-see-car
+  263  cd ~/repos/c1121-code-solutions
+  264  git status
+  265  git branch string-manipulation-3
+  266  git switch string-manipulation-3
+  267  git pull origin string-manipulation-3
+  268  git switch master
+  269  git branch http-messages
+  270  git switch http-messages
+  271  git status
+  272  dev-env
+  273  cd ~/repos/c1121-code-solutions
+  274  http https://api.cryptonator.com/api/ticker/btc-usd
+  275  dev env
+  276  devenv
+  277  envdev
+  278  dev-env
+  279  cd ~/repos
+  280  git clone git@github.com:vkahlon/ajax-project.git
+  281  cd ajax-project
+  282  npm ci
+  283  git branch issue-1-user-can-see-big-three
+  284  git switch issue-1-user-can-see
+  285  git switch issue-1-user-can-see-big-three
+  286  git status
+  287  git add index.html
+  288  git add js/main.js
+  289  git status
+  290  git commit -m "Completed Issue 1, steps 1-4."
+  291  git add index.html
+  292  git add js/main.js
+  293  git commit -m "Completed Issue 1, steps 1-4."
+  294  git push origin issue-1-user-can-see-big-three
+  295  git status
+  296  enter dev-env
+  297  dev-env
+  298  cd ~/repos
+  299  cd ajax-project
+  300  git pull origin issue-1-user-can-see-big-three
+  301  git status
+  302  git add js/main.js
+  303  git status
+  304  git commit -m "Made additional optimizations."
+  305  git push origin issue-1-user-can-see-big-three
+  306  git status
+  307  git status
+  308  git add css/styles.css
+  309  index.html
+  310  git add js/main.js
+  311  git add css/styles.css
+  312  git add index.html
+  313  git status
+  314  git commit -m "made patches.."
+  315  git push origin issue-1-user-can-see-big-three
+  316  git status
+  317  git switch master
+  318  git pull origin master
+  319  git branch issue-2-users-get-info
+  320  git switch issue-2-users-get-info
+  321  git status
+  322  git add css/styles.css
+  323  git add index.html
+  324  git add js/data.js
+  325  git add js/main.js
+  326  git status
+  327  Completed Steps 1-8, require some patching in some places."
+  328  cd ~/repos
+  329  cd ajax-project
+  330  git status
+  331  git commit -m "Completed Steps 1-8, require some patching in some places."
+  332  git push origin issue-2-users-get-info
+  333  git status
+  334  git add index.html
+  335  git add js/main.js
+  336  git status
+  337  git commit -m "made a few patches."
+  338  git push origin issue-2-users-get-info
+  339  cd /~repos
+  340  cd ~/repos
+  341  cd ajax-project
+  342  git pull origin issue-5-comparison-table
+  343  git switch master
+  344  git pull origin master
+  345  cd /repos/c1121-code-solutions
+  346  cd ~/repos/c1121-code-solutions
+  347  git pull origin master
+  348  git branch array-manipulation-3
+  349  git switch array-manipulation-3
+  350  git status
+  351  git add array-manipulation-3
+  352  git status
+  353  git commit -m "Completed array-manipulation-3 exercise."
+  354  git push origin array-manipulation-3
+  355  git status
+  356  git add array-manipulation-3
+  357  git status
+  358  git commit -m "Completed flatten.js portion."
+  359  git push origin array-manipulation-3
+  360  git status
+  361  git add array-manipulation-3
+  362  git status
+  363  git commit -m "Completed problems 4 and 5."
+  364  git push origin array-manipulation-3
+  365  git add array-manipulation-3
+  366  git status
+  367  git commit -m "Completed problems  5."
+  368  git push origin array-manipulation-3
+  369  git status
+  370  git add array-manipulation-3
+  371  git status
+  372  git commit -m "attempted step 6."
+  373  git push origin array-manipulation-3
+  374  git status
+  375  cd ~/repos/c1121-code-solutions
+  376  git pull origin array-manipulation-3
+  377  git switch master
+  378  git pull origin master
+  379  git branch object-manipulation-3
+  380  git status
+  381  git pull origin object-manipulation-3
+  382  git status
+  383  git switch object-manipulation-3
+  384  git pull origin object-manipulation-3
+  385  git status
+  386  git add object-manipulation-3
+  387  git commit -m "Completed object-manipulation-3."
+  388  git push origin object-manipulation-3
+  389  git add object-manipulation-3
+  390  git commit -m "Completed object-manipulation-3."
+  391  git push origin object-manipulation-3
+  392  git status
+  393  git commit -m "Completed object-manipulation-3."
+  394  git add object-manipulation-3
+  395  git commit -m "Completed object-manipulation-3."
+  396  git push origin object-manipulation-3
+  397  git status
+  398  git switch master
+  399  git pull origin master
+  400  git switch string-manipulation-1
+  401  git switch master
+  402  git switch string-manipulation-3
+  403  git pull origin string-manipulation-3
+  404  git add string-manipulation-3
+  405  git status
+  406  git commit -m "attempted string-manipulation-3."
+  407  git push origin string-manipulation-3
+  408  git clone /repos
+  409  git clone git@github.com:vkahlon/week-planner.git
+  410  cd ~/repos
+  411  cd weekly-planner
+  412  cd /weekly-planner
+  413  cd week-planner
+  414  git clone git@github.com:vkahlon/week-planner.git
+  415  cd week-planner
+  416  npm ci
+  417  git pull origin master
+  418  git add .
+  419  git commit -m "added the form."
+  420  git push origin master
+  421  git pull origin master
+  422  git add .
+  423  git status
+  424  git commit -m "form done." --no-verify
+  425  git push origin master
+  426  git pull origin master
+  427  git status
+  428  git add .
+  429  git status
+  430  git commit -m "ice cream commit." --no-verify
+  431  git push origin master
+  432  git status
+  433  git pull origin master
+  434  git push origin
+  435  git push origin
+  436  git add .
+  437  git commit -m "table done" --no-verify
+  438  git push origin
+  439  cd ~/repos/c1121-code-solutiions
+  440  cd ~/repos/c1121-code-solutions
+  441  git pull origin master
+  442  git branch es6-const-let
+  443  git switch es6-const-let
+  444  git status
+  445  git add es6-const-let
+  446  git status
+  447  git commit -m "Completed es6-const-let exercise."
+  448  git status
+  449  git push origin es6-const-let
+  450  git pull origin master
+  451  git status
+  452  git switch master
+  453  git status
+  454  git pull origin master
+  455  git status
+  456  git status
+  457  git add es6-template-literals
+  458  git branch  es6-template-literals
+  459  git status
+  460  git branch es6-template-literals
+  461  git switch es6-template-literals
+  462  git status
+  463  git add es6-template-literals
+  464  git status
+  465  git commit -m "Completed es6-template-literals."
+  466  git push origin es6-template-literals
+  467  git switch master
+  468  git status
+  469  git switch es6-template-literals
+  470  git status
+  471  git add es6-template-literals
+  472  git status
+  473  git commit -m "Patched  es6-template-literals."
+  474  git push origin es6-template-literals
+  475  git status
+  476  git switch master
+  477  git status
+  478  git pull origin master
+  479  git status
+  480  git add es6-destructuring
+  481  git branch es6-destructuring
+  482  git status
+  483  git switch es6-destructuring
+  484  git status
+  485  git add es6-destructuring
+  486  git status
+  487  git commit -m "Completed es-6 destructuring exercise."
+  488  git push origin es6-destructuring
+  489  git switch master
+  490  git status
+  491  git add es6-arrow-functions
+  492  git branch es6-arrow-functions
+  493  git switch es6-arrow-functions
+  494  git status
+  495  git status
+  496  git add es6-arrow-functions
+  497  git status
+  498  git commit -m "In progress for es6-arrow-functions."
+  499  git push origin es6-arrow-functions
+  500  git status
+  501  cd ~/repos/c1121-code-silutions
+  502  cd ~/repos/c1121-code-solutions
+  503  git pull origin es6-arrow-functions
+  504  git switch master
+  505  git pull origin master
+  506  git branch command-line-basics
+  507  git switch command-line-basics
+  508  cd command-line-basics
+  509  pwd
+  510  man man
+  511  man cat
+  512  man man
+  513  man cat
+  514  man cat
+  515  cat NAME
+  516  cat laziness.txt
+  517  cat impatience.txt
+  518  cat hubris.txt
+  519  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  520  cat three-virtues.txt
+  521  man ls
+  522  ls
+  523  ls -a
+  524  ls -F
+  525  ls -aF lfz-staff > lfz-staff/contents.txt
+  526  cat lfz-staff/contents.txt
+  527  man pwd
+  528  pwd -L
+  529  pwd > i-was-here.txt
+  530  ls -F
+  531  cat i-was-here.text
+  532  cat i-was-here.txt
+  533  man echo
+  534  man echo
+  535  echo -n 'Hello, World!'
+  536  echo 'Hello, World!' > hello.txt
+  537  ls -F
+  538  cat hello.txt
+  539  man touch
+  540  touch tag-youre-it.txt
+  541  man touch
+  542  touch snoot/boop.txt
+  543  ls snoot/
+  544  man mkdir
+  545  mkdir parent
+  546  ls parent/
+  547  man mkdir
+  548  mkdir parent/child
+  549  mkdir -p parent/child
+  550  mkdir -p parent/child/grandchild
+  551  touch parent/child/grandchild/.gitkeep
+  552  ls -a parent/child/grandchild
+  553  man mv
+  554  mv pokiemans pokemon
+  555  ls pokemon
+  556  man rm
+  557  rm lol.txt
+  558  ls
+  559  man rm
+  560  rm kill-me ...
+  561  rm kill-me
+  562  rm -r kill-me
+  563  ls
+  564  man cp
+  565  cp and-then.txt no-and-then.txt
+  566  ls
+  567  cat and-then.txt
+  568  cat no-and-then.txt
+  569  man history
+  570  history
+  571  history > command-history.txt
