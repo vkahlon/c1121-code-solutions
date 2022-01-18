@@ -5,15 +5,14 @@ const $jokeForm = document.querySelector('#joke-form');
 const jokester = {
   tellJoke: function (setup, punchline) {
     $jokeForm.classList.add('d-none');
-    const self = this;
-    const $introStatement = self.renderJokePhrase('Hey Flash...');
-    self.appendJokePhrase($introStatement);
-    setTimeout(function () {
-      const $jokeSetup = self.renderJokePhrase(setup);
-      self.appendJokePhrase($jokeSetup);
-      setTimeout(function () {
-        const $jokePunchline = self.renderJokePhrase(punchline);
-        self.appendJokePhrase($jokePunchline);
+    const $introStatement = this.renderJokePhrase('Hey Flash...');
+    this.appendJokePhrase($introStatement);
+    setTimeout(() => {
+      const $jokeSetup = this.renderJokePhrase(setup);
+      this.appendJokePhrase($jokeSetup);
+      setTimeout(() => {
+        const $jokePunchline = this.renderJokePhrase(punchline);
+        this.appendJokePhrase($jokePunchline);
         flash.laugh();
       }, 2000);
     }, 2000);
@@ -32,7 +31,7 @@ const jokester = {
 const flash = {
   laughingUrl: 'images/flash-laugh.gif',
   laugh: function () {
-    setTimeout(function () {
+    setTimeout(() => {
       $flashImage.setAttribute('src', this.laughingUrl);
     }, 3000);
   }
