@@ -17,34 +17,18 @@ var playerList = [
     hand: null
   }];
 startsGame(playerList);
-
 function startsGame(playerList) {
-  var emptyDeck = [];
-  var clubsDeck = createDeck('clubs', emptyDeck);
-  var spadesDeck = createDeck('spades', emptyDeck);
-  var the26One = clubsDeck.concat(spadesDeck);
-  var heartsDeck = createDeck('hearts', emptyDeck);
-  var diamondsDeck = createDeck('diamonds', emptyDeck);
-  var the26Two = heartsDeck.concat(diamondsDeck);
-  var fullDeck = the26One.concat(the26Two);
-  var shuffledCards = _.shuffle(fullDeck);
-
-  function createDeck(suit, list) {
-    for (var i = 2; i < 11; i++) {
-      var newCard = { rank: i, suit: suit };
-      list.push(newCard);
+  var ranks = ['Ace', 'King', 'Queen', 'Jack', 10, 9, 8, 7, 6, 5, 4, 3, 2];
+  var suits = ['hearts', 'clubs', 'diamonds', 'spades'];
+  var fullDeck = [];
+  for (var i = 0; i < suits.length; i++) {
+    for (var j = 0; j < ranks.length; j++) {
+      var newCard = { rank: ranks[j], suit: suits[i] };
+      fullDeck.push(newCard);
     }
-    var newJack = { rank: 'Jack', suit: suit };
-    list.push(newJack);
-    var newQueen = { rank: 'Queen', suit: suit };
-    list.push(newQueen);
-    var newKing = { rank: 'King', suit: suit };
-    list.push(newKing);
-    var newAce = { rank: 'Ace', suit: suit };
-    list.push(newAce);
-    return list;
   }
-  for (var i = 0; i < playerList.length; i++) {
+  var shuffledCards = _.shuffle(fullDeck);
+  for (i = 0; i < playerList.length; i++) {
     playerList[i].hand = [shuffledCards[i]];
     shuffledCards = shuffledCards.splice(i);
     playerList[i].hand.push(shuffledCards[i + 1]);
@@ -61,7 +45,6 @@ function startsGame(playerList) {
       var playerStats = { name: getPlayerName, points: getPlayer1TotalRank };
       theTable.push(playerStats);
     }
-
     function getARank(card) {
       if (card === 'Jack' || card === 'Queen' || card === 'King') {
         card = 10;
