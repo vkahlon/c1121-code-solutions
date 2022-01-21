@@ -5,15 +5,9 @@ const userInputTwo = process.argv[3];
 const userInputThree = process.argv[4];
 
 if (userinput === 'read') {
-  fs.readFile('data.json', 'utf8', err => {
-    if (err) {
-      console.err(err);
-      process.exit(1);
-    }
-    for (let i = 1; i < data.nextId; i++) {
-      console.log(`${i}: ${data.notes[i]}`);
-    }
-  });
+  for (let i = 1; i < data.nextId; i++) {
+    console.log(`${i}: ${data.notes[i]}`);
+  }
 }
 if (userinput === 'create') {
   let dataForCreation = data;
