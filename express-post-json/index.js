@@ -1,20 +1,24 @@
 let nextID = 1;
-let grades = {};
-const gradesList = [];
+const grades = {};
 const express = require('express');
 const app = express();
 app.get('/api/grades', (req, res) => {
+  const gradesList = [];
+  for (const property in grades) {
+    gradesList.push(grades[property]);
+  }
   res.json(gradesList);
 });
+
 const newGrade = express.json();
 app.use(newGrade);
+
 app.post('/api/grades', (req, res) => {
-  req.body.ID = nextID;
+  const newObject = req.body;
+  newObject.id = nextID;
+  grades[nextID] = newObject;
   nextID++;
-  res.json(req.body);
-  grades = req.body;
-  gradesList.push(grades);
-  res.send().status(201);
+  res.status(201).json(newObject);
 });
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
