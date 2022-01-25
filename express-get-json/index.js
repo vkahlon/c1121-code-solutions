@@ -19,12 +19,12 @@ const grades = {
     score: 92
   }
 };
-const gradesList = [];
-for (const property in grades) {
-  gradesList.push(grades[property]);
-}
 const app = express();
 app.get('/api/grades', (req, res) => {
+  const gradesList = [];
+  for (const property in grades) {
+    gradesList.push(grades[property]);
+  }
   res.json(gradesList);
 });
 app.listen(3000, () => {
