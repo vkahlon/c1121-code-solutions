@@ -1,2 +1,2 @@
-select max("inventoryId") as "Total DvDs"
+select count("inventoryId") as "Total DvDs"
 from "inventory";
