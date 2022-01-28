@@ -1,6 +1,8 @@
-select
-
+select "genres"."name" as "Genre",
+count(*)
 from "actors"
 join "castMembers" using ("actorId")
 join "filmGenre" using ("filmId")
-where "firstName" = 'Lisa';
+join "genres" using ("genreId")
+where "firstName" = 'Lisa'
+group by "Genre";
