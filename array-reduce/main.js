@@ -26,15 +26,17 @@ const theProduct = numbers.reduce(product);
 console.log(`The product of all numbers is valued at ${theProduct}`);
 
 const funds = (previousValue, currentValue) => {
+  let item = Number(currentValue.amount);
+  const previousChecking = Number(previousValue.amount);
   if (currentValue.type === 'deposit') {
-    currentValue.amount = previousValue.amount + currentValue.amount;
+    item = previousValue + item;
   } else {
-    currentValue.amount = previousValue.amount - currentValue.amount;
+    item = previousValue - item;
   }
-  return currentValue;
+  return item;
 };
-const getTotalFunds = account.reduce(funds);
-console.log(`Your total funds is $${getTotalFunds.amount}`);
+const getTotalFunds = account.reduce(funds, 0);
+console.log(`Your total Funds is ${getTotalFunds}`);
 
 const composite = (previousValue, currentValue) => Object.assign(previousValue, currentValue);
 const getAllTraits = traits.reduce(composite);
