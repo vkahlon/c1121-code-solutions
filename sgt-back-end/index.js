@@ -104,11 +104,42 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   db.query(text, values)
     .then(result => {
       const grade = result.rows[0];
-      res.status(201).json(grade);
+      res.status(200).json(grade);
     })
     .catch(err => {
       console.error(err);
       res.status(500).json({
+        error: 'An unexpected error occurred.'
+      });
+    });
+});
+app.delete('/api/grades/:gradeId', (req, res, next) => {
+  const gradeId = Number(req.params.gradeId);
+  if (!Number.isInteger(gradeId) || gradeId <= 0) {
+    return res.status(400).json({
+      error: '"gradeId" must be a positive integer'
+    });
+  }
+  const sql = `
+    delete from "grades"
+     where "gradeId" = $1
+     returning *
+  `;
+  const value = [gradeId];
+  db.query(sql, value)
+    .then(result => {
+      const grade = result.rows[0];
+      if (!grade) {
+        return res.status(404).json({
+          error: `Cannot find grade with "gradeId" ${gradeId}`
+        });
+      } else {
+        return res.status(204).json(grade);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).json({
         error: 'An unexpected error occurred.'
       });
     });
