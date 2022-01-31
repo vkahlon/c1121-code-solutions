@@ -20,5 +20,5 @@ console.log(`List of Numbers over 5: ${overFive}`);
 const thoseWithE = names.filter(letterE => (letterE.startsWith('E')));
 console.log(`The ones with E: ${thoseWithE}`);
 
-const includesDoubleD = names.filter(doubleD => (doubleD.includes('D', 'd')));
+const includesDoubleD = names.filter(doubleD => (doubleD.includes('d')) || (doubleD.includes('D')));
 console.log(`The ones with the letter d: ${includesDoubleD}`);
