@@ -78,11 +78,11 @@ app.post('/api/grades', (req, res) => {
     db.query(text, values)
       .then(result => {
         const grade = result.rows[0];
-        res.status(201).json(grade);
+        return res.status(201).json(grade);
       })
       .catch(err => {
         console.error(err);
-        res.status(500).json({
+        return res.status(500).json({
           error: 'An unexpected error occurred.'
         });
       });
@@ -104,11 +104,11 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   db.query(text, values)
     .then(result => {
       const grade = result.rows[0];
-      res.status(200).json(grade);
+      return res.status(200).json(grade);
     })
     .catch(err => {
       console.error(err);
-      res.status(500).json({
+      return res.status(500).json({
         error: 'An unexpected error occurred.'
       });
     });
