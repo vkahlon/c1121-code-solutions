@@ -104,7 +104,13 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   db.query(text, values)
     .then(result => {
       const grade = result.rows[0];
-      return res.status(200).json(grade);
+      if (!grade) {
+        return res.status(404).json({
+          error: `Cannot find grade with "gradeId" ${gradeId}`
+        });
+      } else {
+        return res.status(204).json(grade);
+      }
     })
     .catch(err => {
       console.error(err);
