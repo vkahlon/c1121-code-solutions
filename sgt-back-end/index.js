@@ -109,7 +109,7 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
           error: `Cannot find grade with "gradeId" ${gradeId}`
         });
       } else {
-        return res.status(204).json(grade);
+        return res.status(200).json(grade);
       }
     })
     .catch(err => {
@@ -140,7 +140,7 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
           error: `Cannot find grade with "gradeId" ${gradeId}`
         });
       } else {
-        return res.status(204).json(grade);
+        return res.status(204);
       }
     })
     .catch(err => {
