@@ -66,7 +66,7 @@ app.post('/api/grades', (req, res) => {
   const name = req.body.name;
   const course = req.body.course;
   let score = Number(req.body.score);
-  if ((name === undefined) || (course === undefined) || (score < 0) || (score > 100) || (score === undefined)) {
+  if ((name === undefined) || (course === undefined) || (score === undefined) || (score < 0) || (score > 100)) {
     return res.status(400).json({
       error: `Please try again, with valid inputs: your name: ${name}  your course: ${course} your score: ${score}`
     });
