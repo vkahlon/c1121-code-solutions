@@ -19,3 +19,18 @@ console.log(`RAAAGE TEXT: ${rageText}`);
 
 const theLetter = languages.map(letter => letter[0]);
 console.log(`Letter per language: ${theLetter}`);
+
+function doubleTrouble(number) {
+  return number * 2;
+}
+
+function map(array, transform) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    const newMap = transform(array[i]);
+    newArray.push(newMap);
+  }
+  return newArray;
+}
+const test = map(numbers, doubleTrouble);
+console.log(test);
