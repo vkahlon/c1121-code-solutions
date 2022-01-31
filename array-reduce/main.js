@@ -26,8 +26,8 @@ const theProduct = numbers.reduce(product);
 console.log(`The product of all numbers is valued at ${theProduct}`);
 
 const funds = (previousValue, currentValue) => {
-  let item = Number(currentValue.amount);
-  const previousChecking = Number(previousValue.amount);
+  let item = currentValue.amount;
+  const previousChecking = previousValue.amount;
   if (currentValue.type === 'deposit') {
     item = previousValue + item;
   } else {
