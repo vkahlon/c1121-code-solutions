@@ -51,7 +51,7 @@ app.get('/api/grades', (req, res) => {
   db.query(sql)
     .then(result => {
       const allGrades = result.rows;
-      return res.json(allGrades);
+      return res.status(200).json(allGrades);
     })
     .catch(err => {
       console.error(err);
@@ -66,7 +66,7 @@ app.post('/api/grades', (req, res) => {
   const name = req.body.name;
   const course = req.body.course;
   let score = Number(req.body.score);
-  if ((name === undefined) || (course === undefined) || (score === undefined) || (score < 0) || (score > 100)) {
+  if ((name === undefined) || (course === undefined) || (score < 0) || (score > 100)) {
     return res.status(400).json({
       error: `Please try again, with valid inputs: your name: ${name}  your course: ${course} your score: ${score}`
     });
@@ -94,7 +94,7 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   const name = req.body.name;
   const course = req.body.course;
   const score = Number(req.body.score);
-  if ((!Number.isInteger(gradeId) || gradeId <= 0) || (name === undefined) || (course === undefined) || (score < 0) || (score > 100) || (score === undefined)) {
+  if ((!Number.isInteger(gradeId) || gradeId <= 0) || (name === undefined) || (course === undefined) || (score < 0) || (score > 100)) {
     return res.status(400).json({
       error: `Please try again, with valid inputs: your gradeID: ${gradeId} your name: ${name}  your course: ${course} your score: ${score}`
     });
@@ -140,7 +140,7 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
           error: `Cannot find grade with "gradeId" ${gradeId}`
         });
       } else {
-        return res.status(204);
+        return res.status(204).json();
       }
     })
     .catch(err => {
