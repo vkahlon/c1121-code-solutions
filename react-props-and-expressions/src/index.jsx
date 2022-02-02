@@ -14,5 +14,5 @@ const element = (
 
 ReactDOM.render(
   element,
-  document.querySelector('#root', document.getElementById('root'))
+  document.querySelector('#root')
 );
