@@ -1,0 +1,43 @@
+button {
+  margin-top: 10px;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 5px 2px 2px black;
+}
+
+span {
+  margin-left: 2rem;
+  background-color: yellow;
+  border: 3px solid black;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.cold {
+  background-color: purple;
+  color: white;
+}
+
+.cool {
+  background-color: rgb(189, 0, 189);
+  color: white;
+}
+
+.fine {
+  background-color: rgb(224, 102, 102);
+  color: white;
+}
+
+.heat {
+  background-color: rgb(246, 178, 106);
+  color: black;
+}
+
+.hot {
+  background-color: yellow;
+  color: black;
+}
+
+.kaput {
+  background-color: white;
+  color: black;
+}
