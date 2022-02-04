@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.toggleOn {
+  position: relative;
+  top: 40px;
+  left: 14px;
+}
+
+.toggleOff {
+  margin-top: 20vh;
+  position: relative;
+}
