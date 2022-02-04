@@ -17,18 +17,22 @@ export default class SwampSwitch extends React.Component {
     let shrek = 'https://faceswaponline.com/wp-content/uploads/2017/10/shrek-yelling.png';
     let shout = 'GET OUT OF MY SWAMP';
     let enviorment = 'container swamp';
+    let buttonStatus = 'danger';
     if (!status) {
       layoutClass = 'offLayout';
       inputClass = 'toggleOff';
       shrek = '';
       shout = '';
       enviorment = 'container';
+      buttonStatus = 'safety';
     }
     return (
       <div className={enviorment}>
       <div className='row'>
       <div className={layoutClass}>
-        <input onClick={this.handleClick} type="checkbox" className={inputClass} />
+        <span onClick={this.handleClick} className={inputClass}>
+        <span onClick={this.handleClick} className={buttonStatus}></span>
+        </span>
       </div>
       </div>
         <div className='row shrek'>
