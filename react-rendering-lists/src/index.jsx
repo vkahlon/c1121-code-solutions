@@ -8,7 +8,7 @@ const pokedex = [
   { number: '039', name: 'Jigglypuff' }
 ];
 const firstList = pokedex.map(pokemon =>
-<li key={pokemon.toString()}>{ pokemon.name }</li>
+<li key={pokemon.number}>{ pokemon.name }</li>
 );
 ReactDOM.render(
   <ul>{firstList}</ul>,
