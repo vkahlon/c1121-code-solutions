@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+}
+
+.swamp {
+  background-color: rgb(206, 127, 74);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  margin-top: 20vh;
+  padding: 5px 30px;
+  border: 2px solid black;
+  border-radius: 45px;
+}
+
+.toggleOn {
+  position: relative;
+  top: 40px;
+  left: 14px;
+  background-color: rgb(158, 252, 158);
+}
+
+.toggleOff {
+  top: 90px;
+  position: relative;
+}
+
+.shrek {
+  margin-top: 3rem;
+}
+
+.safety {
+  position: relative;
+  right: 39px;
+  background-color: white;
+}
+
+.danger {
+  position: relative;
+  left: 39px;
+  background-color: white;
+}
