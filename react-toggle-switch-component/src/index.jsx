@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HotButton from './toggle-switch';
+import SwampSwitch from './toggle-switch';
 
 ReactDOM.render(
-  < HotButton />,
+  < SwampSwitch />,
   document.querySelector('#root')
 );
