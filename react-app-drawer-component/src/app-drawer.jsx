@@ -31,15 +31,16 @@ export default class AppDrawer extends React.Component {
     return (
       <div className='row'>
           <i onClick={this.handleClick} className={hambBurger}></i>
-          <div className='col-thirty'>
+          <div className='col-games'>
         <div className={showGames}>
           <div className='text-wrapper'>
-          <b>Metal Gear Solid Games by Kojima</b>
+          <b>Metal Gear Solid Games</b>
           <p onClick={this.goBack}>Metal Gear Solid</p>
           <p onClick={this.goBack}>Metal Gear Solid 2</p>
           <p onClick={this.goBack}>Metal Gear Solid 3</p>
           <p onClick={this.goBack}>Metal Gear Solid 4</p>
           <p onClick={this.goBack}>Metal Gear Solid V: Phantom Pain</p>
+          <a href="https://www.youtube.com/watch?v=8mHKHKR8x6A&ab_channel=AaronHardbarger"> Crab Battle?</a>
           </div>
           </div>
           </div>
