@@ -1,0 +1,17 @@
+.fas {
+  padding-left: 1rem;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.fa-times {
+  color: red;
+}
+
+.fa-check {
+  color: green;
+}
+
+p {
+  color: red;
+}
