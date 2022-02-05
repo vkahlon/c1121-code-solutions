@@ -1,0 +1,45 @@
+i {
+  font-size: larger;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-thirty {
+  width: 30%;
+}
+
+b {
+  font-size: large;
+}
+
+.hidden {
+  display: none;
+}
+
+.optionLayer {
+  transition-delay: left 5s;
+  height: 100vh;
+  background-color: white;
+}
+
+.ice {
+  color: hidden;
+}
+
+.overlay {
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-height: 100vh;
+}
+
+.text-wrapper {
+  position: relative;
+  left: 10px;
+  top: 30px;
+}
