@@ -48,10 +48,12 @@ export default class Carousel extends React.Component {
 
   componentDidMount() {
     // const currentView = this.state.image;
+    // console.log(currentView);
     // const limit = pokedex.length - 1;
-    this.timer = setInterval(() => {
-      this.setState({ image: this.state.image + 1 });
-    }, 1000);
+    // if (currentView === limit) {
+    // } else {
+    //   this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
+    // }
   }
 
   render() {
