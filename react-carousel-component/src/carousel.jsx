@@ -10,10 +10,11 @@ export default class HotButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { image: 0 };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleRightClick = this.handleRightClick.bind(this);
+    this.handleLeftClick = this.handleLeftClick.bind(this);
   }
 
-  handleClick() {
+  handleRightClick() {
     const currentView = this.state.image;
     const limit = pokedex.length - 1;
     if (currentView === limit) {
@@ -23,30 +24,44 @@ export default class HotButton extends React.Component {
     }
   }
 
+  handleLeftClick() {
+    const currentView = this.state.image;
+    const limit = pokedex.length - 1;
+    if (currentView === 0) {
+      this.setState({ image: limit });
+    } else {
+      this.setState({ image: this.state.image - 1 });
+    }
+  }
+
   render() {
     const image = this.state.image;
+    const displayImage = <img className='img-wrapper' src={pokedex[image].image} alt='logo' />;
+    const filledCircle = <i className="fas fa-circle"></i>;
+    const emptyCircle = <i className="far fa-circle"></i>;
+
     // const pokeList = null;
     return (
       <div className='container outer-decoration'>
         <div className='row quick-wrapper'>
           <div className='column-twenty'>
-            <i className='fas fa-angle-left row icon-wrapper'></i>
+            <i onClick={this.handleLeftClick}className='fas fa-angle-left row icon-wrapper'></i>
           </div>
           <div className='column-eighty'>
-            <img className='img-wrapper' src={pokedex[image].image} alt='logo'/>
+            {displayImage}
           </div>
           <div className='column-twenty'>
-            <i onClick={this.handleClick}className='fas fa-angle-right row icon-wrapper'></i>
+            <i onClick={this.handleRightClick}className='fas fa-angle-right row icon-wrapper'></i>
           </div>
         </div>
         <div className='row quick-wrapper'>
           <div className='column-full'>
             <div className='row quick-wrapper bullets'>
-              <i className="fas fa-circle"></i>
-              <i className="far fa-circle"></i>
-              <i className="far fa-circle"></i>
-              <i className="far fa-circle"></i>
-              <i className="far fa-circle"></i>
+              {filledCircle}
+              {emptyCircle}
+              {emptyCircle}
+              {emptyCircle}
+              {emptyCircle}
             </div>
           </div>
         </div>
