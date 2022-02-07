@@ -6,15 +6,17 @@ const pokedex = [
   { pokemonID: 3, image: '../images/025.png' },
   { pokemonID: 4, image: '../images/039.png' }
 ];
-export default class HotButton extends React.Component {
+export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = { image: 0 };
     this.handleRightClick = this.handleRightClick.bind(this);
     this.handleLeftClick = this.handleLeftClick.bind(this);
+    this.handleCircleClick = this.handleCircleClick.bind(this);
   }
 
   handleRightClick() {
+    clearInterval(this.timer);
     const currentView = this.state.image;
     const limit = pokedex.length - 1;
     if (currentView === limit) {
@@ -22,9 +24,11 @@ export default class HotButton extends React.Component {
     } else {
       this.setState({ image: this.state.image + 1 });
     }
+    this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
   }
 
   handleLeftClick() {
+    clearInterval(this.timer);
     const currentView = this.state.image;
     const limit = pokedex.length - 1;
     if (currentView === 0) {
@@ -32,14 +36,36 @@ export default class HotButton extends React.Component {
     } else {
       this.setState({ image: this.state.image - 1 });
     }
+    this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
+
+  }
+
+  handleCircleClick(id) {
+    clearInterval(this.timer);
+    this.setState({ image: id });
+    this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
+  }
+
+  componentDidMount() {
+    // const currentView = this.state.image;
+    // console.log(currentView);
+    // const limit = pokedex.length - 1;
+    // if (currentView === limit) {
+    // } else {
+    //   this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
+    // }
   }
 
   render() {
     const image = this.state.image;
+    const displayCircle = pokedex.map(pokemon => {
+      if (image === pokemon.pokemonID) {
+        return <i onClick={() => { this.handleCircleClick(pokemon.pokemonID); }} className="fas fa-circle"></i>;
+      } else {
+        return <i onClick={() => { this.handleCircleClick(pokemon.pokemonID); }} className="far fa-circle"></i>;
+      }
+    });
     const displayImage = <img className='img-wrapper' src={pokedex[image].image} alt='logo' />;
-    const filledCircle = <i className="fas fa-circle"></i>;
-    const emptyCircle = <i className="far fa-circle"></i>;
-
     // const pokeList = null;
     return (
       <div className='container outer-decoration'>
@@ -57,11 +83,7 @@ export default class HotButton extends React.Component {
         <div className='row quick-wrapper'>
           <div className='column-full'>
             <div className='row quick-wrapper bullets'>
-              {filledCircle}
-              {emptyCircle}
-              {emptyCircle}
-              {emptyCircle}
-              {emptyCircle}
+              {displayCircle}
             </div>
           </div>
         </div>
