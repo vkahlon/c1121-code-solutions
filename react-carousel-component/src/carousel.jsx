@@ -6,6 +6,7 @@ export default class Carousel extends React.Component {
     this.handleRightClick = this.handleRightClick.bind(this);
     this.handleLeftClick = this.handleLeftClick.bind(this);
     this.handleCircleClick = this.handleCircleClick.bind(this);
+    this.nextImage = this.nextImage.bind(this);
   }
 
   handleRightClick() {
@@ -17,14 +18,7 @@ export default class Carousel extends React.Component {
     } else {
       this.setState({ image: this.state.image + 1 });
     }
-    this.timer = setInterval(() => {
-      const currentView = this.state.image;
-      if (currentView === limit) {
-        return this.setState({ image: 0 });
-      } else {
-        return this.setState({ image: this.state.image + 1 });
-      }
-    }, 1000);
+    this.nextImage();
   }
 
   handleLeftClick() {
@@ -36,31 +30,20 @@ export default class Carousel extends React.Component {
     } else {
       this.setState({ image: this.state.image - 1 });
     }
-    this.timer = setInterval(() => {
-      const currentView = this.state.image;
-      if (currentView === limit) {
-        return this.setState({ image: 0 });
-      } else {
-        return this.setState({ image: this.state.image + 1 });
-      }
-    }, 1000);
+    this.nextImage();
   }
 
   handleCircleClick(id) {
     clearInterval(this.timer);
     this.setState({ image: id });
-    const limit = this.props.prop.length - 1;
-    this.timer = setInterval(() => {
-      const currentView = this.state.image;
-      if (currentView === limit) {
-        return this.setState({ image: 0 });
-      } else {
-        return this.setState({ image: this.state.image + 1 });
-      }
-    }, 1000);
+    this.nextImage();
   }
 
   componentDidMount() {
+    this.nextImage();
+  }
+
+  nextImage() {
     const limit = this.props.prop.length - 1;
     this.timer = setInterval(() => {
       const currentView = this.state.image;
