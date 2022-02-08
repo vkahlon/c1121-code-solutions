@@ -42,7 +42,7 @@ export default class App extends React.Component {
     fetch('api/todos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ task: 'pwn noobs', isCompleted: false })
+      body: JSON.stringify(newTodo)
     })
       .then(response => response.json())
       .then(data => {
@@ -70,6 +70,20 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+    const currentList = this.state.todos;
+    const replaceObject = currentList[todoId - 1];
+    const progression = (!(replaceObject.isCompleted));
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ isCompleted: progression })
+    })
+      .then(response => response.json())
+      .then(data => {
+        const newList = currentList.slice();
+        newList.splice(todoId - 1, 1, data);
+        this.setState({ todos: newList });
+      });
   }
 
   render() {
