@@ -24,7 +24,14 @@ export default class Carousel extends React.Component {
     } else {
       this.setState({ image: this.state.image + 1 });
     }
-    this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
+    this.timer = setInterval(() => {
+      const currentView = this.state.image;
+      if (currentView === limit) {
+        return this.setState({ image: 0 });
+      } else {
+        return this.setState({ image: this.state.image + 1 });
+      }
+    }, 1000);
   }
 
   handleLeftClick() {
@@ -36,24 +43,40 @@ export default class Carousel extends React.Component {
     } else {
       this.setState({ image: this.state.image - 1 });
     }
-    this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
-
+    this.timer = setInterval(() => {
+      const currentView = this.state.image;
+      if (currentView === limit) {
+        return this.setState({ image: 0 });
+      } else {
+        return this.setState({ image: this.state.image + 1 });
+      }
+    }, 1000);
   }
 
   handleCircleClick(id) {
     clearInterval(this.timer);
     this.setState({ image: id });
-    this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
+    const limit = pokedex.length - 1;
+    this.timer = setInterval(() => {
+      const currentView = this.state.image;
+      if (currentView === limit) {
+        return this.setState({ image: 0 });
+      } else {
+        return this.setState({ image: this.state.image + 1 });
+      }
+    }, 1000);
   }
 
   componentDidMount() {
-    // const currentView = this.state.image;
-    // console.log(currentView);
-    // const limit = pokedex.length - 1;
-    // if (currentView === limit) {
-    // } else {
-    //   this.timer = setInterval(() => { return this.setState({ image: this.state.image + 1 }); }, 1000);
-    // }
+    const limit = pokedex.length - 1;
+    this.timer = setInterval(() => {
+      const currentView = this.state.image;
+      if (currentView === limit) {
+        return this.setState({ image: 0 });
+      } else {
+        return this.setState({ image: this.state.image + 1 });
+      }
+    }, 1000);
   }
 
   render() {
