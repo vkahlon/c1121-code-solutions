@@ -71,7 +71,10 @@ export default class App extends React.Component {
      * And specify the "Content-Type" header as "application/json"
      */
     const currentList = this.state.todos;
-    const replaceObject = currentList[todoId - 1];
+    const newList = currentList.slice();
+    const findObject = newList.find(element => element.todoId === todoId);
+    const correctLocale = newList.indexOf(findObject);
+    const replaceObject = newList[correctLocale];
     const progression = (!(replaceObject.isCompleted));
     fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
@@ -80,8 +83,7 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(data => {
-        const newList = currentList.slice();
-        newList.splice(todoId - 1, 1, data);
+        newList.splice(correctLocale, 1, data);
         this.setState({ todos: newList });
       });
   }
