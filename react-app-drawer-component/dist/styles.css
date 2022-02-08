@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding-left: 10px;
+}
+
+i {
+  font-size: larger;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-games {
+  width: 320px;
+}
+
+b {
+  font-size: large;
+}
+
+a {
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.optionLayer {
+  transition-delay: left 5s;
+  height: 100vh;
+  background-color: white;
+}
+
+.ice {
+  color: hidden;
+}
+
+.overlay {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-height: 100vh;
+}
+
+.text-wrapper {
+  position: relative;
+  left: 10px;
+  top: 30px;
+}
