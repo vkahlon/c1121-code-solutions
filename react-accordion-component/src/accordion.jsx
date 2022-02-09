@@ -18,17 +18,17 @@ export default class Accordion extends React.Component {
   render() {
     const view = this.state.view;
 
-    const characterList = this.props.prop.map(snakes => {
-      if (view === snakes.id) {
-        return <div key={snakes.id}>
-          <div onClick={() => { this.handleClick(snakes.id); }}
-            className="header" name={snakes.name} >{snakes.name}</div>
-          <div className="description">{snakes.bio}</div>
+    const topicList = this.props.prop.map(topics => {
+      if (view === topics.id) {
+        return <div key={topics.id}>
+          <div onClick={() => { this.handleClick(topics.id); }}
+            className="header" name={topics.name} >{topics.name}</div>
+          <div className="description">{topics.bio}</div>
         </div>;
       } else {
-        return <div key={snakes.id}>
-          <div onClick={() => { this.handleClick(snakes.id); }}
-            className="header" name={snakes.name} >{snakes.name}</div>
+        return <div key={topics.id}>
+          <div onClick={() => { this.handleClick(topics.id); }}
+            className="header" name={topics.name} >{topics.name}</div>
         </div>;
       }
     }
@@ -36,7 +36,7 @@ export default class Accordion extends React.Component {
     );
     return (
      <div className='container'>
-        {characterList}
+        {topicList}
      </div>
     );
   }
