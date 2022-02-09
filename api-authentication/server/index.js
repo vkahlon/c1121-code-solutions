@@ -72,11 +72,11 @@ app.post('/api/auth/sign-in', (req, res, next) => {
               user: payload
             };
             res.status(200).json(userResponse);
+          } else {
+            throw new ClientError(401, 'invalid login error');
           }
         })
-        .catch(err => {
-          console.error(err);
-        });
+        .catch(err => next(err));
     })
     .catch(err => next(err));
 
