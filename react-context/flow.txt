@@ -1,53 +1,56 @@
-Before we start, need to point out that AppContext is our context provider which contains the Navbar and PageContainer components as children.
-It has a prop which contains the value of our context that we are gonna use down the road.
-These children components have access to this prop.
-
-User can sign up:
+**User can sign up:**
 
 client-side:
-- user must click on the sign up button in order to view swap the form to the registration form.
-- User enters their credentials, hits register and an account is created, the user sees the sign in page.
+user must click on the sign up button in order to view swap the form to the registration form.
+User enters their credentials, hits register and an account is created, the user sees the sign in page.
 
 the Server side:
-- First important thing to note is that the rick roll gif that you used to get us, is at home.jsx Only works when a user is signed in.
-- In regards to Sign up, at auth.jsx is where some of the sign-up elements get created after going through a conditional check between sign in or sign up. In Auth-form the form elements get renderd. The Navbar elements get rendered in navbar by default.
-- When the Register button is pressed, a handlesubmit event occurs, post method is activated, it determines the action through what type of submission it was.
-- In index.js, our post method with the /sign-up activates, it checks for invalid conditions if invalid, it gets thrown.
-- Otherwise, through argon2, a new hashpassword gets generated. Then inserted into our postgress database at table users.
-- if succesful, the form view swaps to the sign-in page.
-- In our postgres, a new userId, username, and hashpassword is generated.
+First important thing to note is that the rick roll gif that you used to get us, is at home.jsx Only works when a user is signed in.
+In regards to Sign up, at auth.jsx is where some of the sign-up elements get created after going through a conditional check between sign in or sign up.
+In Auth-form the form elements get renderd. It also is consuming data from the AppContext.provider. the const variables user, route, and handleSign come from context.
+The Navbar elements get rendered in navbar, it also is consuming data from the AppContext.provider, the const variables user and handleSignOut come from the context, and sets up the conditionals.
+When the Register button is pressed, a handlesubmit event occurs, post method is activated, it determines the action through what type of submission it was.
+In index.js, our post method with the /sign-up activates, it checks for invalid conditions if invalid, it gets thrown. If sucessful, it returns a promise, and gets parsed as an object.
+Otherwise, through argon2, a new hashpassword gets generated. Then inserted into our postgress database at table users.
+if succesful, the form view swaps to the sign-in page.
+In our postgres, a new userId, username, and hashpassword is generated.
 
-User can Sign in:
+**User can Sign in:**
 Client Side:
--User enters in their credentials, hits submit and gets rick rolled. Navbar has a signout button.
+User enters in their credentials, hits submit and gets rick rolled. Navbar has a signout button.
 
 The Server Side:
-Like sign up, a conditional is used to determine if the user is signing up or signing in. Navbar remains the same, where as the form is different from the sign-up due to the condition in auth-form.
-When the Login button is pressed, a handlesubmit event occurs, post method gets activated, sign-in version, the result is the onSign getting a new value.
+a conditional is used to determine if the user is signing up or signing in. Navbar remains the same, where as the form is different from the sign-up due to the condition in auth-form.
+When the Login button is pressed, a handlesubmit event occurs, post method gets activated, with the sign-in string, the result is the onSign getting a new value.
 BUT, first in index.js, post('/api/auth/sign-in' gets activated, checks for any missing form inputs. Uses the username value to help narrow down the SQL-SELECT, and then SQL gets query'd.
 In the query, the userpassword gets converted into the hashed password and there's a method to check if the SQL SELECT hashedPassword and the freshly password match, if not, user gets greeted with an invalid login message.
 If there is a match, the client gets back a token that contains permission to get trolled, and also get their non-sensitive account information.
 
-User can stay signed in (even if they refresh the page).
+**User can stay signed in (even if they refresh the page).**
 
 Client Side:
-If the User loves Rick Astley, they can see him dange again. A sign-out button is now visibile on the navbar
+If the User loves Rick Astley, they can see him dance again. A sign-out button is now visibile on the navbar
 
 Server Side:
 Local Storage holds onto the token that the user got after they signed in
 In App.jsx, in the ComponentDidMount method, it grabs the token from window.localStorage(the key)
 If a token exists, which it does, it gets decoded from the decodeToken function within decode-token.js and assigned as a variable.
 The token is assigned to the user, which gives him the permission to get trolled.
-At home, the rick roll is activated, and in the navbar, due to the condition of user not being null, it says sign out.
+At home, the rick roll is activated, and in the navbar, due to the condition of user not being null in the component Nav, it now is set as a sign out button.
 
-User Signs Out:
+**User Signs Out:**
 
 Client Side:
 User has had enough and hits the sign out button to end the madness.
 The Rick Roll goes away and the user sees the sign in page once again.
 
 Server Side:
-Once the user hits signout, the handleSignout gets activated from the onclick function.
+Once the user hits signout, the handleSignOut gets activated from the onclick function.
 Within the function, localStorage [key] or the token gets removed in entirely, and the user state is set to null.
 the Navbar and the home page gets set back to default
 Rick Astley is no more.... for NOW.
+
+
+additional notes for me only (future reference):
+-AppContext contains a provider component, consumer component. Provider provides data (AppContext.provider in this exercise), Consumer component allows a component consume data (Ex Navbar.contextType = AppContext;).
+-PageContainer is
