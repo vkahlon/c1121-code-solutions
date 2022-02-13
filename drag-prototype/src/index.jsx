@@ -8,15 +8,42 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = intialData;
-    this.onDragEnd = this.onDragEnd.bind(this);
-
   }
+    // eslint-disable-next-line
+  onDragEnd = result => {
+    const { destination, source, draggableId } = result;
 
-  onDragEnd() {
-    return result => {
-      // TODO: reorder our column
+    if (!destination) {
+      return;
+    }
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
+
+    const column = this.state.columns[source.droppableId];
+    const newTaskIds = Array.from(column.taskIds);
+    newTaskIds.splice(source.index, 1);
+    newTaskIds.splice(destination.index, 0, draggableId);
+
+    const newColumn = {
+      ...column,
+      taskIds: newTaskIds,
     };
-  }
+
+    const newState = {
+      ...this.state,
+      columns: {
+        ...this.state.columns,
+        [newColumn.id]: newColumn,
+      },
+    };
+
+    this.setState(newState);
+  };
 
   render() {
     return <DragDropContext onDragEnd={this.onDragEnd}>
