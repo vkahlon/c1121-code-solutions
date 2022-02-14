@@ -11,7 +11,7 @@ const Container = styled.div`
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = intialData;``
+    this.state = intialData;
   }
   onDragStart = start => {
     const homeIndex = this.state.columnOrder.indexOf(start.source.droppableId);
@@ -90,12 +90,18 @@ class App extends React.Component {
         [newFinish.id]: newFinish,
       },
     };
+
+    // const getUnitStrength = newState.columns['column-2'].taskIds.reduce(x =>{
+    //   return newState.columns['column-2'].strength += newState.tasks[x].strength
+
+    // } )
+    console.log(newState)
+    console.log(newState.strength)
     this.setState(newState);
   };
 
   render() {
     return (
-      <h1>test</h1>,
       <DragDropContext onDragEnd={this.onDragEnd}>
         <Container>
           {this.state.columnOrder.map(columnId => {
