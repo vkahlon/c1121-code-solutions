@@ -11,16 +11,21 @@ const initialData = {
     'column-1': {
       id: 'column-1',
       title: 'Units',
-      taskIds: ['task-1', 'task-2', 'task-3', 'task-4', 'task-5']
+      taskIds: ['task-1', 'task-2', 'task-3', 'task-4']
     },
     'column-2': {
       id: 'column-2',
+      title: 'Briefing',
+      taskIds: ['task-5', 'task-2', 'task-4']
+    },
+    'column-3': {
+      id: 'column-3',
       title: 'Squad',
       taskIds: []
     }
   },
   // Facilitate reordering of the columns
-  columnOrder: ['column-1', 'column-2'],
+  columnOrder: ['column-1', 'column-2', 'column-3'],
   strength: 2000
 
 };
