@@ -12,25 +12,31 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = intialData;
+    this.onDragStart = this.onDragStart.bind(this)
+    this.onDragUpdate = this.onDragUpdate.bind(this)
   }
-  onDragStart = start => {
-    const homeIndex = this.state.columnOrder.indexOf(start.source.droppableId);
 
-    this.setState({
-      homeIndex,
-    });
-  };
-  onDragUpdate = update => {
+  onDragStart() {
+    return start => {
+      const homeIndex = this.state.columnOrder.indexOf(start.source.droppableId);
+
+      this.setState({
+        homeIndex,
+      });
+    };
+  }
+  onDragUpdate() {
+    return update => {
     const { destination } = update;
     const opacity = destination
       ? destination.index / Object.keys(this.state.tasks).length
       : 0;
     document.body.style.backgroundColor = `rgba( 153, 141, 217, ${opacity})`;
   };
-    // eslint-disable-next-line
+}
+// eslint-disable-next-line
   onDragEnd = result => {
     const { destination, source, draggableId } = result;
-
     if (!destination) {
       return;
     }
@@ -90,13 +96,6 @@ class App extends React.Component {
         [newFinish.id]: newFinish,
       },
     };
-
-    // const getUnitStrength = newState.columns['column-2'].taskIds.reduce(x =>{
-    //   return newState.columns['column-2'].strength += newState.tasks[x].strength
-
-    // } )
-    console.log(newState)
-    console.log(newState.strength)
     this.setState(newState);
   };
 
