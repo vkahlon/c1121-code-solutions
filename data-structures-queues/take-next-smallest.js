@@ -10,13 +10,7 @@ function takeNextSmallest(queue) {
   }
   while (first > queue.peek()) {
     queue.enqueue(first);
-    first = queue.peek();
+    first = queue.dequeue();
   }
-  let second = queue.dequeue();
-  while (second > queue.peek()) {
-    queue.enqueue(second);
-    second = queue.peek();
-  }
-  return queue.peek();
-
+  return first;
 }
